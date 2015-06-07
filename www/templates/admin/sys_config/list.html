@@ -1,0 +1,138 @@
+<{include file="$temple_folder/header.html"}>
+<script type="text/javascript">
+	var m_c_id;
+	var onclickbutton;
+	function order_page(order_name){
+		var order_by = $('#order_by').val();
+		if(order_by == 'DESC'){
+			order_by = 'ASC';
+		}else{
+			order_by = 'DESC';
+		}
+		location.href ="?action=sys_config&do=list&page="+<{$page}>+"&order_name="+order_name+"&order_by="+order_by;
+	}
+	function check_all_list(){
+		if($("#check_all_box").attr("checked") == false){
+			$("#check_all_box").attr("checked",true);
+			$("input[name=check_box]:checkbox").each(function() {
+				$(this).attr("checked",true);			
+			})
+		}else{
+			$("#check_all_box").attr("checked",false);
+			$("input[name=check_box]:checkbox").each(function() {
+				$(this).attr("checked",false);			
+			})
+		}		
+	}
+	function del_data(id){
+		m_c_id = id;
+		onclickbutton = 'del_data';
+		$('#dialog').dialog('open');
+		$('#dialog').html('您确定要删除本条数据么？');
+	}
+	function del_all_data(){
+		onclickbutton = 'del_all_data';
+		$('#dialog').dialog('open');
+		$('#dialog').html('您确定要删除所选数据么？');
+	}
+	$(function(){	
+		// Dialog
+		$('#dialog').dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode",
+			width: 600,
+			buttons: {
+				"Ok": function() {
+					$(this).dialog("close");
+					if(onclickbutton == 'del_data'){
+						$.ajax({ 								//一个Ajax过程
+							type: "GET", 						
+							url : "admin.php",					//与此php页面沟通
+							data: 'action=sys_config&do=del&id='+m_c_id, 	//发给php的数据有两项，分别是上面传来的u和p
+							success: function(result){			//如果调用php成功
+								location.href ="?action=sys_config&do=list";
+							}
+						});
+					}
+					if(onclickbutton == 'del_all_data'){
+						var id_array = '';
+						$("input[name=check_box]:checkbox").each(function() {
+							if($(this).attr("checked") == true){
+								if(id_array != ''){
+									id_array = id_array + '|' + $(this).val();
+								}else{
+									id_array = $(this).val();
+								}
+							}
+						});
+						$.ajax({ 								//一个Ajax过程
+								type: "POST", 						
+								url : "admin.php",					//与此php页面沟通
+								data: 'action=sys_config&do=del&id='+id_array, 	//发给php的数据有两项，分别是上面传来的u和p
+								success: function(result){			//如果调用php成功
+									location.href ="?action=sys_config&do=list";
+								}
+							});
+					}
+					return true;
+				},
+				"Cancel": function() {
+					$(this).dialog("close");
+					return false;
+				}
+			}
+		});		
+	});
+</script>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<input id="order_name" type="checkbox" value="<{$order_name}>" name="order_name" style="display:none;">
+<input id="order_by" type="checkbox" value="<{$order_by}>" name="order_by" style="display:none;">
+<h1>
+	<span class="action-span1"> 系统配置信息管理 </span>
+</h1>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=sys_config&do=category">首页</a>&nbsp;|&nbsp;<a href="?action=sys_config&do=add">添加系统配置信息</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer" onclick="check_all_list();">全选<input id="check_all_box" type="checkbox" value="0" name="check_all_box" style="display:none;"></th>
+					<th class="check_pointer" onclick="order_page('sys_config_name');"> 名称 </th>
+					<th class="check_pointer" onclick="order_page('m_c_id');"> 系统配置信息分类 </th>
+					<th class="check_pointer" onclick="order_page('sys_config_url');"> 系统配置信息连接 </th>
+					<th class="check_pointer" onclick="order_page('add_time');"> 添加时间 </th>
+					<th class="check_pointer" onclick="order_page('status');"> 状态 </th>
+					<th> 描述 </th>
+					<th> 操作向导 </th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td  width="30" height="22"><input id="checkbox_<{$r.sys_config_id}>" type="checkbox" value="<{$r.sys_config_id}>" name="check_box"> </td>
+					<td height="22"> <{$r.sys_config_name}></td>
+					<td height="22"> <{$r.mc_name|truncate:40}></td>
+					<td height="22"> <{$r.sys_config_url|truncate:40}></td>
+					<td height="22"> <{$r.add_time|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+					<td> <{if $r.status == 1}>启用<{else}>未启用<{/if}></td>
+					<td> <{if $r.sys_config_desc}><{$r.sys_config_desc|truncate:60}><{/if}></td>
+					<td  width="150" height="22">
+						<a href="javascript:;" id="dialog_del" onclick="del_data(<{$r.sys_config_id}>);" >删除</a>&nbsp;
+						<a href="?action=sys_config&do=add&type=edit&id=<{$r.sys_config_id}>">修改</a>
+					</td>
+				</tr>
+			  <{/foreach}>
+			</table>
+			<div style="margin-top:10px;text-align:left;">
+				&nbsp;&nbsp;<a href="javascript:;" onclick="del_all_data();" >删除</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+			</div>
+</div>
+<{include file="$temple_folder/footer.html"}>
+

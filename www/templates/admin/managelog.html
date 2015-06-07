@@ -1,0 +1,40 @@
+<{include file="$temple_folder/header.html"}>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<h1>
+	<span class="action-span1"> 操作日志 </span>
+	<div class="clear"></div>
+</h1>
+<div class="list-div" id="listDiv" >
+	<table width='100%' border="0" cellpadding="0" cellspacing="0" class="list-table" >
+		<tr class="tdbg" >
+			<td width="70" height="30" style="padding-left:5px;"><strong>快捷操作：</strong></td>
+			<td height="30"><a href="?action=managelog">操作日志</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="list-div" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+	<tr align="center" class="title">
+		<th  width="30" height="22"><strong> ID </strong></th>
+		<th height="22"><strong> 操作者 </strong></th>
+		<th height="22"><strong> 操作时间</strong></th>
+		<th><strong> 操作IP</strong></th>
+		<th width="70%"><strong> 内容</strong></th>
+	</tr>
+	<{foreach from=$result.result item=r}>
+	<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+		<td width="5%" height="22"><{$r.log_id}></td>
+		<td  width="10%" height="22"><{$r.log_user}></td>
+		<td height="22"><{$r.log_time|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+		<td><{$r.log_ip|long2ip}></td>
+		<td width="70%" style="text-align:left;"><{$r.log_content}></td>
+	</tr>
+	<{/foreach}>
+	</table>
+</div>
+<div style="margin-top:10px;text-align:left;">
+	总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+</div>
+</body>
+</html>

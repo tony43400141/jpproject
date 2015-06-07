@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>__WEBN__-<{$detail.n_title}></title>
+<include file="./Tpl/Public/header.html" />
+</head>
+
+<body>
+  <div class="allbg">
+    <!------------框架------------->
+    <div class="nywrapper">
+     <div class="left nynav fl">
+      <include file="./Tpl/Public/lefter.html" />
+      </div>
+      <!------------最新信息------------->
+      <div class="nymain fr">
+        <div class="nytitle"><div class="fl"><div class="st fl" style="background:#6a8e9f"></div><h2 style="color:#6a8e9f;">最新信息</h2><div class="xx fr"></div></div></div>
+        <div class="content">
+          <h2><{$detail.n_title}></h2>
+          <div class="subtitle"><span>作者：pierrot</span><span>发布时间<{$detail.add_time|date="Y-m-d H:i:s",###}></span></div>
+          <div class="clear"></div>
+          <div class="nr">
+            <{$detail.n_content}>
+          </div>
+        </div>
+    </div>
+   <include file="./Tpl/Public/footer.html" />
+    </div>
+  </div>
+</body>
+</html>

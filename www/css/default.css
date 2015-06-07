@@ -1,0 +1,288 @@
+body {
+	color: #000000;
+	font-size: 12px;
+	SCROLLBAR-FACE-COLOR: #9A0000; 
+    SCROLLBAR-HIGHLIGHT-COLOR: #DC0000; 
+    SCROLLBAR-SHADOW-COLOR: #740000;
+    SCROLLBAR-3DLIGHT-COLOR: #CA0000; 
+    SCROLLBAR-ARROW-COLOR: #740000;
+    SCROLLBAR-BASE-COLOR: #Fffffff;
+    SCROLLBAR-DARKSHADOW-COLOR: #740000;
+}
+td {
+	font-size: 12px;
+	color: #000000;
+	line-height: 150%;
+}
+a {  text-decoration: none; color: #000000}
+a:hover {
+	color: #FFFFFF;
+; text-decoration: underline}
+.img {  margin-left: 40px; padding-left: 40px}
+.select{ border:1px double rgb(88,88,88);font:9pt }.f2 {  color: #BAC4D4}
+.tm {  filter: Alpha(Opacity=70)}
+.tm1 {  filter: Alpha(Opacity=50)}
+.wztouyin {
+	filter: DropShadow(Color=#800C0C, OffX=1, OffY=1, Positive=1);
+        height:1;
+}
+.wztouyin01 {
+	filter: DropShadow(Color=#ffffff, OffX=1, OffY=1, Positive=1);
+        height:1;
+}
+.input {
+	float: none;
+;
+	height: 18px;
+	width: 154px;
+	background-color: #A71C1C;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #300000;
+	border-right: 1px solid #EC3E3E;
+	border-bottom: 1px solid #EC3E3E;
+	border-left: 1px solid #300000;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input00 {
+	float: none;
+;
+	height: 16px;
+	width: 101px;
+	background-color: #A71C1C;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #300000;
+	border-right: 1px solid #EC3E3E;
+	border-bottom: 1px solid #EC3E3E;
+	border-left: 1px solid #300000;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input01 {
+	float: none;
+;
+	height: 18px;
+	width: 101px;
+	background-color: #A71C1C;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #300000;
+	border-right: 1px solid #EC3E3E;
+	border-bottom: 1px solid #EC3E3E;
+	border-left: 1px solid #300000;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input02 {
+	float: none;
+;
+	height: 18px;
+	width: 153px;
+	background-color: #A71C1C;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #300000;
+	border-right: 1px solid #EC3E3E;
+	border-bottom: 1px solid #EC3E3E;
+	border-left: 1px solid #300000;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input03 {
+	float: none;
+;
+	height: 16px;
+	width: 39px;
+	background-color: #B6B6B6;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #6D6D6D;
+	border-right: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+	border-left: 1px solid #6D6D6D;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input04 {
+	float: none;
+	height: 18px;
+	width: 154px;
+	background-color: #A71C1C;
+	margin: 1px;
+	padding: 0px;
+	border-top: 1px solid #300000;
+	border-right: 1px solid #EC3E3E;
+	border-bottom: 1px solid #EC3E3E;
+	border-left: 1px solid #300000;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: bottom;
+}
+.input05 {
+	float: none;
+	width: 60px;
+	height: 18px;
+	background-color: #A71C1C;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #300000;
+	border-right: 1px solid #EC3E3E;
+	border-bottom: 1px solid #EC3E3E;
+	border-left: 1px solid #300000;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input06 {
+	background-image: url(../Imgs/input/input_del.gif);
+	background-repeat: no-repeat;
+	height: 19px;
+	width: 51px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	clip:  rect(   );
+	cursor: hand;
+	z-index: 4;
+}
+.input07 {
+	float: none;
+	background-color: #B6B6B6;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #6D6D6D;
+	border-right: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+	border-left: 1px solid #6D6D6D;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input70 {
+	float: none;
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #6D6D6D;
+	border-right: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+	border-left: 1px solid #6D6D6D;
+	font-size: 12px;
+	color: #000000;
+}
+.input08 {
+	background-image: url(../Imgs/input/input_send.gif);
+	background-repeat: no-repeat;
+	height: 19px;
+	width: 51px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	clip:  rect(   );
+	cursor: hand;
+	z-index: 4;
+}
+.input09 {
+	float: none;
+	background-color: #B6B6B6;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #EAEAEA;
+	border-right: 1px solid #6D6D6D;
+	border-bottom: 1px solid #6D6D6D;
+	border-left: 1px solid #EAEAEA;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.input10 {
+	background-image: url(../imgs/input/input_queding.gif);
+	background-repeat: no-repeat;
+	height: 19px;
+	width: 51px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	clip:  rect(   );
+	cursor: hand;
+	z-index: 4;
+}
+.input11 {
+	float: none;
+	;
+	clip:   rect(   );
+	height: 17px;
+	background-color: #C4985B;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #5A3A0C;
+	border-right: 0px solid #F3D690;
+	border-bottom: 0px solid #F3D690;
+	border-left: 1px solid #5A3A0C;
+	font-size: 12px;
+}
+.input12 {
+	float: none;
+	;
+	clip:   rect(   );
+	background-color: #C4985B;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #5A3A0C;
+	border-right: 1px solid #F3D690;
+	border-bottom: 1px solid #F3D690;
+	border-left: 1px solid #5A3A0C;
+	font-size: 12px;
+}
+.input13 {  background-image: url(../imgs/input_send_img.gif); background-repeat: no-repeat; height: 19px; width: 49px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-style: none; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; position: relative; visibility: visible; left: 0px; top: 0px; clip:  rect(   ); cursor: hand
+}
+.hand {  cursor: hand}
+.tdmanu {
+	color: #FFFFFF;
+	filter: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=true);
+	height: 2px;
+	cursor: hand;
+}
+
+.top_menu{
+	
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="zh-CN">
+	<meta name="keywords" content="开服,更新,维护,合服,游戏资讯">
+    <meta name="description" content="__WEBN__网页游戏平台（__WEBD__）是专业的网页游戏娱乐平台,这里汇集了好玩的网页游戏!网页游戏开服表和排行榜.是玩家玩网页游戏的首选网页游戏大全网站!">
+ 	<css href="__CSS__base.css" />
+    <css href="__CSS__header.css" />
+    <css href="__CSS__footer.css" />
+    <css href="__CSS__css.css" />
+    <css href="__CSS__news.css" />
+    <link type="image/x-icon" href="http://__WEBD__/favicon.ico" rel="icon">
+    <link type="image/x-icon" href="http://__WEBD__/favicon.ico" rel="shortcut icon">
+    <js href="__JS__jquery.min.js" />
+    <js href="__JS__jquery.cookie.js" />
+    <script type="text/javascript">var _M = 'default',_C = 'index',_A = 'news';</script>
+        <title>网页游戏新闻中心_开服_合服_更新维护 – __WEBN__</title>
+</head>
+<body youdao="bind">
+<!-- header -->
+<include file="./Tpl/Index/header.html" /> 
+<!-- header -->
+    <div class="doc">
+    <div class="content">
+        <div class="gleft">
+            <div class="newslist">
+                <div class="title">
+                    当前位置：<a href="http://www.1073.com/index.html">首页</a> >> <em>游戏资讯</em>
+
+                <select class="title_game" style="position: absolute; top: 10px; right: 10px;" name="gid" id="gid">
+					<option value="0">所有游戏</option>
+ 					<volist name="glist" id="vo">
+                        <option value="<{$vo.id}>" <if condition="$vo.id eq $gid"> selected="selected"</if>><{$vo.game_name}></option>
+                     </volist>
+</select>                </div>
+                <div class="news_con">
+                    <div class="phead">
+                        <div class="news-clist">
+        <a href="<{:U('Article/index')}>" id="lastedNews" rel="0">新闻中心</a>
+        <a href="<{:U('Article/index',array('cid'=>1,'gid'=>$gid))}>" rel="1">新闻资讯</a>
+        <a href="<{:U('Article/index',array('cid'=>2,'gid'=>$gid))}>" rel="2">游戏公告</a>
+        <a href="<{:U('Article/index',array('cid'=>3,'gid'=>$gid))}>" rel="3">游戏活动</a>
+        <a href="<{:U('Article/index',array('cid'=>4,'gid'=>$gid))}>" rel="4">游戏攻略</a>
+        <a href="<{:U('Article/index',array('cid'=>5))}>" rel="5">系统帮助</a>
+    </div>                    </div>
+                    <div class="cf pbody" style="margin: -35px 0 0 0">
+                        <ul class="list">
+                        <volist name="alist['list']" id="vo">
+                        <li>
+                            <span class="date"> <{$vo.add_time|date="Y-m-d",###}></span>
+                            <a href="<{:U('Article/index',array('cid'=>$vo[c_id]))}>" style=" margin-right:5px;">[<{$cat[$vo[c_id]]}>]</a>
+                            <a class="ntitle" href="<{:U('Article/detail',array('aid'=>$vo[article_id]))}>" target="_blank">      <{$vo[article_title]}></a>
+                        </li>
+                        </volist>
+                           
+                  </ul>
+                        <div class="pagination page"><{$alist['show']}></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gright">
+            <div class="serverbox">
+    <div class="title">
+        <div class="left lefthover" id="__tabs_1">最新开服动态</div>
+        <div class="right" id="__tabs_2">一周内新服推荐</div>
+        <div class="clear"></div>
+    </div>
+    <div class="zxkfdt" id="_tabs_1">
+        <div class="tb-thead">
+            <table>
+                <tbody><tr>
+                    <td>日期	</td>
+                    <td>时间</td>
+                    <td>游戏名称</td>
+                    <td>区服</td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="tb-body" id="_serverlist">
+         
+                <volist name="openinfo" id="vo" key='i'>       
+                    <div class="server-list" <if condition="$i gt 10">style="display:none;" </if>>
+                    <p class="date"><{$vo.open_time|date="m-d",###}></p>
+                    <p class="time"><{$vo.open_time|date="H:i",###}></p>
+                    <p class="game"><a style="" href="<{:U('Game/glist',array('gameId'=>$vo[game_id]))}>"><{$vo.game_name}></a></p>
+                    <p class="server" style="height:28px">
+                        <a href="<{$vo.game_url}>">
+                        双线<{$vo.area_name}>服</a>
+                                        </p>
+                    <div class="clear"></div>
+                </div>
+                </volist> 
+
+                    </div>
+        <div class="jspage" id="_jpage">
+            <a href="javascript:" class="on pngfix">1</a>
+            <a href="javascript:" class="pngfix">2</a>
+        </div>
+    </div>
+    <div class="yzxfdt" style="display: none;" id="_tabs_2">
+        <div class="tb-thead">
+            <table>
+                <tbody><tr>
+                    <td width="70">游戏	</td>
+                    <td width="120">服务区</td>
+                    <td>新手卡</td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="tb-body">
+             <volist name="wres" id="vo">
+           <div class="server-list">
+                <p class="game" style="width:90px;"><a style="color:#028300" href="<{:U('Game/glist',array('gameId'=>$vo[game_pid]))}>"><{$vo[gname]}></a></p>
+                <p class="server" style="width:120px;"><a href="<{:U('Game/glist',array('gameId'=>$vo[game_pid]))}>">双线<{$vo.server_flag}>服[S<{$vo.server_flag}>]</a></p>
+                <p class="card" style="width:60px;"><a href="<{:U('Code/index',array('gid'=>$vo[game_pid],'sid'=>$vo[id]))}>">&nbsp;</a></p>
+                <div class="clear"></div>
+            </div>
+         </volist>                        
+          </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    $('#__tabs_1').bind('click',function(){
+        $(this).addClass('lefthover');
+        $('#__tabs_2').removeClass('righthover');
+        $('#_tabs_1').show();
+        $('#_tabs_2').hide();
+    })
+    $('#__tabs_2').bind('click',function(){
+        $(this).addClass('righthover');
+        $('#__tabs_1').removeClass('lefthover');
+        $('#_tabs_1').hide();
+        $('#_tabs_2').show();
+    })
+
+    $('#_jpage').find('a').click(function(){
+        var curPage = $(this).text();
+        $('#_jpage').find('a').removeClass('on');
+        $(this).addClass('on');
+        $('#_serverlist').find('div.server-list').toggle();
+    });
+    
+	$('a._j_sname').hover(function(){$(this).hide();$(this).next().show();},function(){});
+    $('a._j_remind').hover(function(){},function(){$(this).hide();$(this).prev().show();});
+	$('.news-clist').children('a').each(function(){
+												if($(this).attr('rel')=='<{$cid}>')
+												{
+													$(this).addClass('focus');
+												}
+												else
+												{
+													$(this).removeClass('focus');
+												}
+												});
+});
+</script>            <p class="gameph">热门游戏排行</p>
+<table width="288" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+    <tbody>
+	<volist name="glist" id="vo" k="i" offset="1" length='12'>
+            <tr>
+            <td width="41"><span class="<if condition='$i lt 4'>number_red<else/>number_blue</if>"><{$i}></span></td>
+            <td width="53"><img src="__IMG__<{$vo.g_pic}>" width="27" height="28"></td>
+            <td width="84"><a href="<{:U('Game/glist',array('gameId'=>$vo['id']))}>" class="red"><{$vo.game_name}></a></td>
+            <td width="73"><span class="enter_red"><a href="<{:U('Game/ginfo',array('cgId'=>$vo['gserver'][0]['id']))}>" target="_blank">进入新服</a></span></td>
+        </tr>
+    </volist>  
+    </tbody>
+</table>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("#gid").change(function(){
+            location.href = "/article/index/gid/"+$('#gid').val();
+        })
+    });
+</script>
+<include file="./Tpl/Index/footer.html" />
+<!--[if IE 6]>
+<js href="__JS__DD_belatedPNG_0.0.8a-min.js" />
+<script type="text/javascript">
+    DD_belatedPNG.fix('.slide-pages a,.userbox,.pngfix,background');
+    DD_belatedPNG.fix('.pngfiximg,img');
+</script>
+<![endif]--> 
+<js href="__JS__common.js" />   
+</body></html>

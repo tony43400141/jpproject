@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>管理员登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" src="js/jquery.js"></script>
+<script language="javascript" src="js/func.js"></script>
+<script language=javascript>
+
+<!--
+
+function SetFocus()
+{
+if (document.Login.UserName.value=="")
+	document.Login.UserName.focus();
+else
+	document.Login.UserName.select();
+}
+function CheckBrowser()
+{return;
+  var app=navigator.appName;
+  var verStr=navigator.appVersion;
+  if (app.indexOf('Netscape') != -1) {
+    alert("友情提醒：\n    你使用的是Netscape浏览器，可能会导致无法使用后台的部分功能。建议您使用 IE6.0 或以上版本。");
+  }
+  else if (app.indexOf('Microsoft') != -1) {
+
+    if (verStr.indexOf("MSIE 3.0")!=-1 || verStr.indexOf("MSIE 4.0") != -1 || verStr.indexOf("MSIE 5.0") != -1 || verStr.indexOf("MSIE 5.1") != -1)
+
+      alert("友情提醒：\n    您的浏览器版本太低，可能会导致无法使用后台的部分功能。建议您使用 IE6.0 或以上版本。");
+
+  }
+
+}
+
+//-->
+
+</script>
+<LINK href="images/login/public.css" type="text/css" rel="stylesheet">
+<LINK href="images/login/login.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<form name="Login" action="?action=login" id="Login" method="post" target="_parent">
+<DIV id=div1>
+  <TABLE id=login height="100%" cellSpacing=0 cellPadding=0 width=800 align=center top="200">
+    <TBODY>
+      <TR >
+        <TD>
+		  <TABLE id=main cellSpacing=0 cellPadding=0 width="100%" height="490" >
+			<TR >
+				<TD>
+          <TABLE height="490" cellSpacing=0 cellPadding=0 width="100%">
+            <TBODY>
+              <TR>
+                <TD colSpan=4></TD>
+              </TR>
+              <TR height=30>
+                <TD width=380>&nbsp;</TD>
+                <TD>&nbsp;</TD>
+                <TD>&nbsp;</TD>
+                <TD>&nbsp;</TD>
+              </TR>
+              <TR height=40>
+                <TD rowSpan=4>&nbsp;</TD>
+                <TD>用户名：</TD>
+                <TD>
+                  <INPUT class=textbox id="UserName" name="UserName" onFocus="this.select(); ">
+                </TD>
+                <TD width=120>&nbsp;</TD>
+              </TR>
+              <TR height=40>
+                <TD>密　码：</TD>
+                <TD>
+                  <INPUT class=textbox id="Password" type=password name="Password"  onFocus="this.select(); ">
+                </TD>
+                <TD width=120>&nbsp;</TD>
+              </TR>
+              <TR height=40>
+                <TD>验证码：</TD>
+                <TD vAlign=center colSpan=2>
+                  <INPUT id=txtSN size=4 name="CheckCode" onFocus="this.select(); " style="height:25px;width:50px;">&nbsp; <img src="checkNumber.php" id="setcode" style="vertical-align:middle;"> <A id=LinkButton1 href="javascript:changecode();" style="text-align:center;">刷新一下</A></TD>
+              </TR>
+              <TR height=40>
+                <TD></TD>
+                <TD align=right>
+					<input type="hidden" name="loginin" value="login" />
+					<INPUT id=btnLogin type=submit value=" 登 录 " name=btnLogin style="height:30px;width:60px;">
+                </TD>
+                <TD width=120>&nbsp;</TD>
+              </TR>
+              <TR height=110>
+                <TD colSpan=4>&nbsp;</TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+		   </TD>
+			</TR>
+		  </TABLE>
+        </TD>
+      </TR>
+      <TR height=104>
+        <TD align="right" style="font-size:14px;">Copyright (c) <span id="dataY" style="color:#FFF;"></span> Pierrot All Rights Reserved.</TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+</DIV>
+<DIV id=div2 style="DISPLAY: none"></DIV>
+
+</form>
+<script language="JavaScript" type="text/JavaScript">
+time();
+CheckBrowser();
+SetFocus();
+function changecode()
+{
+	$('#setcode').attr('src','checkNumber.php?t='+Math.random());
+}
+function time()
+{
+
+  var now= new Date();
+
+  var year=now.getFullYear();
+
+ document.getElementById("dataY").innerHTML=year;
+
+
+} 
+</script>
+
+</body>
+</html>
+

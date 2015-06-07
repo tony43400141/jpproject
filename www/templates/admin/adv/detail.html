@@ -1,0 +1,61 @@
+<{include file="$temple_folder/header.html"}>
+<body>
+
+<form method="post" action="?action=gamea&do=<{if $type == 'edit'}>update&id=<{$id}><{else}>insert<{/if}>" name="gamead_form" id="gamead_form" enctype="multipart/form-data">
+<h1>
+	<span class="action-span1"><strong>咨询管理-咨询详情</strong></span>
+</h1>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpgameading="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=adv&do=list">首页</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+	<table width="100%" border="0" align="center" cellpgameading="2" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>用户姓名：</strong></td>
+		  <td width="1158" class="tdbg"><{$result[0].username}></td>
+		</tr>
+		<tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>手机号码：</strong></td>
+		  <td class="tdbg">
+			<{$result[0].mobile}>
+			</td>
+		</tr>
+         <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>email：</strong></td>
+		  <td class="tdbg">
+			<{$result[0].email}>
+		  </td>
+		</tr>
+        <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>是否联系：</strong></td>
+		  <td class="tdbg">
+			<{if $result[0].is_contact==1}>已联系<{else}>未联系<{/if}>
+		  </td>
+		</tr>
+         <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>创建时间：</strong></td>
+		  <td class="tdbg">
+			<{$result[0].add_time|date_format:'%Y-%m-%d %H:%M:%S'}>
+		  </td>
+		</tr>
+        <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>联系时间：</strong></td>
+		  <td class="tdbg">
+			<{$result[0].update_time|date_format:'%Y-%m-%d %H:%M:%S'}>
+		  </td>
+		</tr>
+      <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>咨询内容：</strong></td>
+		  <td width="1158" class="tdbg"><{$result[0].content}></td>
+		</tr>
+	</table>
+</div>
+</form>
+<{include file="$temple_folder/footer.html"}>
+

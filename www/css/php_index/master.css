@@ -1,0 +1,150 @@
+/*----主体框架----*/
+.wrapper{width:1002px; margin:0 auto;}
+.line{margin:0 0 10px 0;clear:both;}
+.first{height:249px;}
+.second{height:209px;}
+.third{height:354px;margin:0;}
+
+/*----三栏广告----*/
+.spEnter{margin:10px auto 10px;width:986px;height:75px;position:relative;}
+.spEnterCl{height:13px;position:relative;}
+.spEnter ul li{width:324px;height:75px;overflow:hidden; float:left;}
+.spLi{margin:0 7px;}
+.ycad{display:block;width:18px;height:9px;font-size:0;background:url(../../images/php_index/jt.jpg) no-repeat;position:absolute; top:71px;left:50%;}
+.dj{background-position:0 -9px;}
+
+/*----用户信息----*/
+.user{width:266px;position:relative;float:left;}
+.ear_l{width:8px;height:49px; background:url(../../images/php_index/round_l.jpg) no-repeat;margin:8px 0 0;float:left;}
+.ear_r{width:8px;height:49px; background:url(../../images/php_index/round_r.jpg) no-repeat;margin:8px 0 0;float:left;}
+.round_r{width:5px; height:35px;float:right; background:url(../../images/php_index/span_r.jpg) no-repeat;}
+.title{background:url(../../images/php_index/round_bg.jpg) repeat-x; height:35px;width:240px;margin:6px 0 0 -2px;position:relative}
+.titleUser{width:135px;height:30px; display:block;margin:-3px 0 0 10px;background:url(../../images/php_index/user_t.jpg) no-repeat;float:left;_position:relative}
+.leftBox{width:254px;border:2px solid #c2b0b0;float:left;background:#fff;position:relative}
+.userBox{height:245px;}
+.loginArea{padding:10px 16px 0;}
+.inputBox{width:165px;height:70px; float:left;}
+.inputBox li{height:30px;}
+.loginNow{width:56px;height:53px;display:block;background:url(../../images/php_index/loginNow.jpg) no-repeat; float:left;text-indent:-9999px;overflow:hidden;}
+.userInp{background:url(../../images/php_index/inp_bg.jpg) repeat-x;padding:2px 4px 3px;width:140px;border:1px solid #e4e4e3;font-family:'Arial', 'Helvetica', sans-serif;font-weight:bold;color:#ababac;}
+.butGroup{margin:8px 0 0 0;height:30px;overflow:hidden;}
+.butGroup li{width:95px;height:30px;display:inline;float:left;margin:1px 6px;}
+.butGroup li a{width:48px;height:13px;display:block;padding:7px 10px 5px 30px;background:url(../../images/php_index/but_bg.jpg) no-repeat;}
+.fucMenu{border-top:1px solid #ececec;background:#fafafa;width:246px;height:62px;position:absolute;bottom:0;padding:0 4px;}
+.fucMenu ul li{width:81px; float:left;border-right:1px solid #ececec;}
+.fucMenu ul li.nobor{border:none}
+.fucMenu ul li a{width:57px;height:57px;display:block;text-indent:-9999px;overflow:hidden;margin:2px 10px;}
+.fucMenu ul li a:hover{background-position:0 -57px;}
+.zhcz{background:url(../../images/php_index/zhcz.jpg) no-repeat;}
+.servies{background:url(../../images/php_index/servies.jpg) no-repeat;}
+.zhgl{background:url(../../images/php_index/zhgl.jpg) no-repeat;}
+/*----登陆成功----*/
+.loginSuc{padding:5px 16px 0;}
+.tx{width:59px;height:60px;float:left;padding:0 10px 0 0;}
+.infoList{line-height:16px;}
+.tx img{width:57px;height:57px;border:1px solid #c1c1c1;}
+.four{height:60px;}
+.lateLogin{padding:0 10px;width:234px;overflow:hidden}
+.tLateLogin{display:block;width:230px;font-weight:bold;padding:10px 5px 10px 0;}
+.lateLoginGame{width:110px;height:25px;line-height:25px; float:left;_cursor:pointer;}
+
+/*----大眼睛----*/
+.bigeyes{width:364px;height:245px; border:2px solid #c2b0b0; float:left;margin:0 10px 0 18px;overflow:hidden;}
+#focus380340{float:left;width:344px;height:245px;clear:both;position: relative;}
+.bigeye{width:364px;height:245px;}
+.be-wrapper{width:364px;height:245px;}
+.be-wrapper .be-fl{float:left;display:inline;}
+.be-wrapper .be-image{width:364px;height:245px;background-color:black;overflow:hidden;}
+.be-wrapper .be-image img{border:none;}
+.be-wrapper .be-nav{width:364px;height:76px;clear:both;position: absolute;left: 6px;top: 180px;}
+.be-wrapper .be-btn{width:20px;height:34px;background:url(../../images/php_index/1215/bigeye.gif) no-repeat;margin:24px 4px 18px 4px;cursor:pointer;}
+.be-wrapper .be-btn-left{background-position:0 -76px;}
+.be-wrapper .be-btn-left-highlight{background-position:0 -110px;}
+.be-wrapper .be-btn-right{background-position:-20px -76px;}
+.be-wrapper .be-btn-right-highlight{background-position:-20px -110px;}
+.be-wrapper .be-thumbs{width:300px;height:76px;position:relative;overflow:hidden;}
+.be-wrapper .be-list-wrapper{width:640px;height:76px;}
+.be-wrapper .be-list{width:320px;height:76px;margin:0;padding:0;list-style:none;z-index:0;}
+.be-wrapper .be-thumb-wrapper{width:75px;height:76px;}
+.be-wrapper .be-thumb{width:64px;height:46px;margin:14px 3px 8px 3px;border:2px solid white;cursor:pointer;}
+.be-wrapper .be-indicator{background:url(images/bigeye.gif) no-repeat -40px -76px;position:absolute;z-index:1;left:0;}
+.be-wrapper .be-list li img{border-color:gray;}
+
+
+/*----首页新闻----*/
+.news{width:340px;overflow:hidden;float:left;_position:relative;}
+.newsTitle{width:324px;position:relative;}
+.newsBox{width:320px;}
+.tabs{display:block;width:82px;height:30px;margin:-3px 0 0 0;_position:relative;cursor:pointer;text-indent:-9999px;overflow:hidden;float:left;}
+.tNews{margin:-3px 0 0 5px; background:url(../../images/php_index/news.jpg) no-repeat;}
+.tNotice{background:url(../../images/php_index/notice.jpg) no-repeat;}
+.tActive{background:url(../../images/php_index/active.jpg) no-repeat;}
+.newslist{padding:5px 12px;width:296px;height:194px;overflow:hidden;*float:left;}
+.newslist li{padding:0 0 0 15px; background:url(../../images/php_index/news_ico.jpg) left center no-repeat; border-bottom:1px dotted #dcdcdc;line-height:26px;}
+.newslist li a{width:237px;*float:left;}
+.newslist li span{text-align:right;float:right;}
+.on{background-position:0 -30px;}
+
+/*----热门活动----*/
+.hotActive{width:266px;position:relative;overflow:hidden;float:left;}
+.hotActiveBox{height:205px !important;}
+.tHotActive{width:135px;height:30px; display:block;margin:-3px 0 0 10px;background:url(../../images/php_index/hot_active.jpg) no-repeat;float:left;_position:relative}
+.active{width:106px; height:28px; background:url(../../images/php_index/hot_act.jpg) right bottom no-repeat; text-indent:-9999px; display:block;}
+.l_but,.r_but{width:22px;height:22px; display:block; position:absolute; top:8px }
+.l_but{background:url(../../images/php_index/icon_l.jpg) no-repeat;right:45px;}
+.r_but{background:url(../../images/php_index/icon_r.jpg) no-repeat;right:15px;}
+#ranklist{width:250px; overflow:hidden;}
+.hot_act{font-size:12px;padding:5px;width:244px;overflow:hidden;}
+.hot_act a{font-size:12px;}
+.hot_act li{border-bottom:#c2c2c2 1px dotted;display:inline-block;clear:both; line-height:20px; padding:5px 0; width:244px;overflow:hidden;}
+.hot_act p code {float:left; line-height:8px;color:#9f9fa1;}
+.hot_act img {float:left;padding:1px; border:3px solid #c8c8c8;margin:3px 10px 0 0;display:inline;}
+.hot_act em {display:block;color:#919b9d;}
+.hot_act div{line-height:19px; padding-bottom:5px; display:none;}
+
+/*----电视热播动漫网游戏开始----*/
+.tvGame{width:726px;margin:0 0 0 10px;float:left;overflow:hidden;_position:relative;}
+.Oear_l{width:8px;height:49px; background:url(../../images/php_index/Oround_l.jpg) no-repeat;float:left;margin:8px 0 0;}
+.Oear_r{width:8px;height:49px; background:url(../../images/php_index/Oround_r.jpg) no-repeat;float:left;margin:8px 0 0;}
+.tvGameBox{width:706px;height:205px;}
+.tvGameTitle{background:url(../../images/php_index/Oround_bg.jpg) repeat-x;width:710px;}
+.tTvgame{width:195px;height:30px; display:block;margin:-3px 0 0 10px;background:url(../../images/php_index/tv_game.jpg) no-repeat;float:left;_position:relative}
+.tvGameKh{float:left;padding:8px 10px 5px; color:#ffdabb;font-size:13px;}
+.gameList{padding:12px 20px;}
+.gameList li{width:190px;height:145px;display:inline;overflow:hidden;float:left;}
+.gameList li.space{width:40px;height:145px;background:url(../../images/php_index/space.jpg) center no-repeat;}
+.gameList li.space1{width:40px;height:136px;background:url(../../images/php_index/space2.jpg) top center no-repeat;}
+.gameTitle {padding:5px 0;height:18px;line-height:18px;}
+.gameTitle h2{width:80px; float:left;}
+.gamePic{padding:1px;border:3px solid #c8c8c8}
+.gameTitle strong{color:#f45727; text-align:right;float:right;}
+.gameLinks{line-height:14px;margin:10px 0 0;}
+.gameLinks li{float:left;width:25px;height:13px;padding:0 3px;border-right:1px solid #cccccc;}
+.gameLinks li.enter{border:none;width:72px; height:22px; margin:-4px 0 0 15px;}
+.enter a{width:72px; display:block;text-indent:-9999px;line-height:22px; background:url(../../images/php_index/go.jpg) no-repeat;overflow:hidden; }
+.enter a:hover{background-position:0 -22px;}
+
+/*----服务器列表----*/
+.servList{width:266px;overflow:hidden;float:left;}
+.tSerList{width:135px;height:30px; display:block;margin:-3px 0 0 10px;background:url(../../images/php_index/kfsj_list.jpg) no-repeat;float:left;_position:relative}
+.servListBox{height:350px;}
+.kfsj{padding:10px}
+.kfsj table{text-align:center;}
+.kfsj th{color:#666666; line-height:30px;border-bottom:1px solid #ccc;}
+.kfsj td{line-height:35px; border-bottom:1px dotted #ccc;}
+.bk1{width:1px;height:12px; font-weight:normal; color:#ccc; padding:0 1px;}
+
+/*----最新游戏列表----*/
+.newGame{width:726px;margin:0 0 0 10px;float:left;overflow:hidden;_position:relative;}
+.newGameBox{width:706px;height:350px;}
+.newGameTitle{background:url(../../images/php_index/round_bg.jpg) repeat-x;width:710px;_position:relative;}
+.tNewgame{width:139px;height:30px; display:block;margin:-3px 0 0 10px;background:url(../../images/php_index/new_game_list.jpg) no-repeat;float:left;_position:relative}
+.newGameKh{float:left;padding:8px 10px 5px; color:#fff;font-size:13px;}
+.dashLine{width:695px;border-top:1px dotted #ccc;position:absolute;top:195px;left:5px;font-size:0;margin:0;padding:0;}
+.newGameList{padding:10px 20px 15px;height:280px; overflow:hidden;}
+.newGameList .gameTitle strong{color:#6d6d6d}
+
+#userti{position:absolute;width:210px;height:45px;line-height:45px;color:#ff0000;float:left;top:-50px; text-align:center;z-index:1000;left:0px;background:url(../../images/php_index/ti.gif);display:none;}
+#wordti{position:absolute;width:210px;height:45px;float:left;line-height:45px;color:#ff0000;top:-50px; text-align:center;z-index:1000;left:0px;background:url(../../images/php_index/ti.gif);display:none;}
+.head_k{position:relative;}
+.head_b{position:relative;}

@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'i_id', 1 => 'i_title', 2 => 'i_c', 3 => 'i_content', 4 => 'add_time', 5 => 'update_time', '_autoinc' => true, '_pk' => 'i_id', '_type' => array ( 'i_id' => 'int(10) unsigned', 'i_title' => 'varchar(100)', 'i_c' => 'varchar(20)', 'i_content' => 'text', 'add_time' => 'int(10)', 'update_time' => 'int(10)', ), );?>

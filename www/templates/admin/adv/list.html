@@ -1,0 +1,60 @@
+<{include file="$temple_folder/header.html"}>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<h1>
+	<span class="action-span1">咨询管理 </span>
+</h1>
+<div class="form-div">
+	  <form action="?action=adv&do=list" name="searchForm" method="post">
+	    
+	    姓名
+	    <input type="text" name="username" value="<{$username}>" size="30" />
+        手机号
+	    <input type="text" name="mobile" value="<{$mobile}>" size="30" />
+        email
+	    <input type="text" name="email" value="<{$email}>" size="30" />
+        是否联系：
+        <select name="is_contact" id="is_contact" style="width:100px;">
+			<option value="-1" <{if $is_contact==-1}>selected<{/if}> <{if !isset($is_contact)}>selected<{/if}> >所有</option>
+			<option value="1" <{if $is_contact==1}>selected<{/if}> >是</option>
+            <option value="0" <{if $is_contact==0}>selected<{/if}> >否</option>
+		</select>
+	    <input type="submit" value=" 搜索 " class="button" />
+        </div>
+	  </form>
+</div>
+<{if $result}>
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer"> 用户姓名 </th>
+					<th class="check_pointer"> 手机号</th>
+                    <th class="check_pointer"> 邮件地址</th>
+                    <th class="check_pointer"> 是否联系</th>
+                    <th class="check_pointer"> 创建时间</th>
+                    <th class="check_pointer"> 联系时间</th>
+                    <th class="check_pointer"> 操作说明 </th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td height="22" align="left"> <{$r.username}></td>
+					<td height="22" align="left"> <{$r.mobile}></td>
+                    <td height="22" align="left"> <{$r.email}></td>
+                     <td height="22" align="left"> <{if $r.is_contact==1}>已联系<{else}><span style="color:#F00;">未联系</span><{/if}></td>
+                    <td height="22"> <{$r.add_time|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+                    <td height="22"> <{$r.update_time|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+                    <td  width="150" height="22">
+						<a href="?action=adv&do=detail&id=<{$r.adv_id}>">内容详情</a>
+                        <{if $r.is_contact==0}>
+                        <a href="?action=adv&do=update&id=<{$r.adv_id}>">确定联系</a>
+                        <{/if}>
+					</td>
+				</tr>
+			  <{/foreach}>
+			</table>
+			<div style="margin-top:10px;text-align:left;">
+				总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+			</div>
+</div>
+<{/if}>
+<{include file="$temple_folder/footer.html"}>
+

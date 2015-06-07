@@ -1,0 +1,105 @@
+<{include file="$temple_folder/header.html"}>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<input id="order_name" type="checkbox" value="<{$order_name}>" name="order_name" style="display:none;">
+<input id="order_by" type="checkbox" value="<{$order_by}>" name="order_by" style="display:none;">
+<h1>
+	<span class="action-span1"> 文章管理 </span>
+</h1>
+<script language="javascript" type="text/javascript">
+	function check_all_list(){
+		if($("#check_all_box").attr("checked") == false){
+			$("#check_all_box").attr("checked",true);
+			$("input[name=check_box]:checkbox").each(function() {
+				$(this).attr("checked",true);			
+			})
+		}else{
+			$("#check_all_box").attr("checked",false);
+			$("input[name=check_box]:checkbox").each(function() {
+				$(this).attr("checked",false);			
+			})
+		}		
+	}
+	function del_data(id){
+		if(confirm('您确定要删除本条数据么？'))
+		{
+		$.ajax({ 								//一个Ajax过程
+				type: "GET", 						
+				url : "admin.php",					//与此php页面沟通
+				data: 'action=article&do=del&id='+id, 	//发给php的数据有两项，分别是上面传来的u和p
+				success: function(result){			//如果调用php成功
+					location.href ="?action=article&do=list";
+				}
+			});
+		}
+	}
+	function del_all_data(){
+		onclickbutton = 'del_all_data';
+		$('#dialog').dialog('open');
+		$('#dialog').html('您确定要删除所选数据么？');
+	}
+</script>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=article&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=article&do=add">添加文章</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+
+<div class="form-div">
+	  <form action="?action=article&do=list" name="searchForm" method="post">
+	    标题
+	    <input type="text" name="keyword" value="<{$keyword}>" size="15" />
+	    请选择游戏：
+	   <select name="game_id" id="game_id" onChange="js_get_cat();">
+			<option value="0">请选择游戏</option>
+			<{foreach from=$gamelist item=g}>
+	   			<option value="<{$g.id}>" <{if $g.id == $game_id}>selected<{/if}>><{$g.game_name}></option>
+	   		<{/foreach}>
+		</select>
+	    文章类别：
+	   <select name="c_id" id="c_id">
+			<option value="0">请选择文章类别</option>
+	   		<{foreach from=$cat item=c}>
+	   			<option value="<{$c.c_id}>" <{if $c.c_id == $c_id}>selected<{/if}>><{$c.c_name}></option>
+	   		<{/foreach}>
+		</select>
+	    <input type="submit" value=" 搜索 " class="button" />
+	  </form>
+	</div>
+	
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer" onClick="check_all_list();">全选<input id="check_all_box" type="checkbox" value="0" name="check_all_box" style="display:none;"></th>
+					<th class="check_pointer" onClick="order_page('article_title');"> 名称 </th>
+					<th class="check_pointer" > 文章分类 </th>
+					<th class="check_pointer" > 游戏名称 </th>
+                    <th class="check_pointer" > 添加时间 </th>
+					<th class="check_pointer" onClick="order_page('status');"> 状态 </th>
+					<th> 操作向导 </th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td  width="30" height="22"><input id="checkbox_<{$r.article_id}>" type="checkbox" value="<{$r.article_id}>" name="check_box"> </td>
+					<td height="22"><{$r.article_title}></td>
+					<td height="22"><{$cat[$r.c_id].c_name}></td>
+					<td height="22"> <{$r.game_name|truncate:40}></td>
+					<td height="22"> <{$r.add_time|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+					<td> <{if $r.status == 1}>启用<{else}>未启用<{/if}></td>
+					<td  width="150" height="22">
+						<a href="javascript:;" id="dialog_del" onClick="del_data(<{$r.article_id}>);" >删除</a>&nbsp;
+						<a href="?action=article&do=add&type=edit&id=<{$r.article_id}>">修改</a>
+					</td>
+				</tr>
+			  <{/foreach}>
+			</table>
+			<div style="margin-top:10px;text-align:left;">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+			</div>
+</div>
+<{include file="$temple_folder/footer.html"}>
+

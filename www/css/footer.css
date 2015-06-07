@@ -1,0 +1,10 @@
+@charset "utf-8";
+.footer{clear:both; float:left;width:950px; padding:14px 0; margin:6px 0 0; border-top:1px solid #ececec; position:relative;}
+.top{width:22px; height:30px; text-indent:-9999px; background:url(../images/top.jpg) no-repeat; position:absolute; right:0; top:-1px; overflow:hidden;}
+.footer ul ul li{ display:inline;}
+.foot_links{ display:block; margin:0 auto ;text-align:center;height:auto   !important;height:21px;min-height:21px; line-height:21px;}
+.foot_links li{padding:5px 10px; }
+.footer a:hover{ text-decoration:underline;}
+.footer_list{*margin:-10px 0 0;line-height:30px; text-align:center;}
+.footer_nav li{border-right:1px solid #696969;padding:0 8px;}
+.footer_nav .lsxy{padding:0 8px 0 25px; background:url(../images/icon_6.jpg) 5px 0 no-repeat;}

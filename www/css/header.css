@@ -1,0 +1,107 @@
+@charset "utf-8";
+.headerTop{height:126px; overflow:hidden; position:relative;}
+.header h1{width:211px; height:126px; float:left;}
+.header h1 a{ display:block;width:211px; height:62px; text-indent:-9999px; overflow:hidden; background:url(../images/logo.jpg) no-repeat; margin:64px 0 0 0;}
+.adHome{position:absolute; top:0;left:212px;}
+.login{ float:right; width:281px; height:113px;padding:6px 0 7px 0;}
+.login_l{height:113px;width:10px; background:url(../images/login_l.jpg) no-repeat; float:left;}
+.login_r{height:113px;width:10px; background:url(../images/login_r.jpg) no-repeat; float:left;}
+.login_body{float:left; width:251px; height:74px; padding:26px 5px 13px; background:url(../images/login_bg.jpg) repeat-x;position:relative;}
+.user_box li{ height:25px;}
+.user label, .pwd label{width:50px; text-align:right;display: block;float: left; padding:0 10px 0 0; line-height:25px;}
+.login_but{position:absolute;right:4px;top:27px;}
+.login_bar{width:56px;height:41px; display:block; text-indent:-9999px; position:relative; overflow:hidden;background:url(../images/login.jpg) no-repeat;}
+.login_way{padding:0 0 0 15px}
+.login_way li{float:left; padding:8px 10px 0 0;}
+.login_way li a{padding: 5px 0 0 18px;line-height:21px; }
+.qq a{background:url(../images/qq.jpg) left bottom no-repeat;}
+.kx a{background:url(../images/kx.jpg) left bottom no-repeat;}
+.xl a{background:url(../images/xl.jpg) left bottom no-repeat;}
+
+/*导航条*/
+.nav{height:45px; background:url(../images/nav_bg.jpg) repeat-x;}
+.nav_l,.nav_r{width:9px;height:45px;float:left;}
+.nav_l{ background:url(../images/nav_l.jpg) no-repeat;}
+.nav_r{ background:url(../images/nav_r.jpg) no-repeat;}
+.nav_m{width:932px; float:left;}
+.nav_c{float:left;}
+.side{width:4px; background:url(../images/side.jpg) center no-repeat; padding:0 5px;}
+.nav_c,.supLink{padding:10px 0 0 0;}
+.nav_c li{float:left; height:25px;}
+.nav_c li a{height:25px;text-indent:-9999px; overflow:hidden; display:block;}
+.home a{width:94px; background:url(../images/home.jpg);}
+.game_a a{width:70px; background:url(../images/yx.jpg);}
+.yxdm a{width:77px; background:url(../images/yxdm.jpg);}
+.news_a a{width:77px; background:url(../images/news.jpg);}
+.video_a a{width:70px; background:url(../images/sp.jpg);}
+.my2121 a{width:76px; background:url(../images/my2121.jpg);}
+.nav_c a:hover{ background-position:0 50px;}
+.on a{background-position:0 25px;}
+.supLink{float:right;}
+.supLink li{float:left; padding:0 12px 0 0;}
+.supLink li a{height:25px;text-indent:-9999px; overflow:hidden; display:block;}
+.change a{width:100px; background:url(../images/img/change.gif) no-repeat;}
+.yyjp a{width:100px; background:url(../images/yyjp.gif) no-repeat;}
+@charset "utf-8";
+.headerTop{height:126px; overflow:hidden; position:relative;}
+.header h1{width:211px; height:126px; float:left;}
+.header h1 a{ display:block;width:211px; height:62px; text-indent:-9999px; overflow:hidden; background:url(../images/logo.jpg) no-repeat; margin:64px 0 0 0;}
+.adHome{position:absolute; top:0;left:212px;}
+.login{ float:right; width:281px; height:113px;padding:6px 0 7px 0;}
+.login_l{height:113px;width:10px; background:url(../images/login_l.jpg) no-repeat; float:left;}
+.login_r{height:113px;width:10px; background:url(../images/login_r.jpg) no-repeat; float:left;}
+.login_body{float:left; width:251px; height:74px; padding:26px 5px 13px; background:url(../images/login_bg.jpg) repeat-x;position:relative;}
+.user_box li{ height:25px;}
+.user label, .pwd label{width:50px;text-align:right;display: block;float: left;padding:0 4px 0 0;line-height:25px;}
+.login_but{position:absolute;right:4px;top:27px;}
+.login_bar{width:56px;height:41px; display:block; text-indent:-9999px; position:relative; overflow:hidden;background:url(../images/login.jpg) no-repeat;}
+.login_way{padding:0 0 0 15px}
+.login_way li{float:left; padding:8px 10px 0 0;}
+.login_way li a{padding: 5px 0 0 18px;line-height:21px; }
+.qq a{background:url(../images/qq.jpg) left bottom no-repeat;}
+.kx a{background:url(../images/kx.jpg) left bottom no-repeat;}
+.xl a{background:url(../images/xl.jpg) left bottom no-repeat;}
+
+/*导航条*/
+.nav{height:45px; background:url(../images/nav_bg.jpg) repeat-x;}
+.nav_l,.nav_r{width:9px;height:45px;float:left;}
+.nav_l{ background:url(../images/nav_l.jpg) no-repeat;}
+.nav_r{ background:url(../images/nav_r.jpg) no-repeat;}
+.nav_m{width:932px; float:left;}
+.nav_c{float:left;}
+.side{width:4px; background:url(../images/side.jpg) center no-repeat; padding:0 5px;}
+.nav_c,.supLink{padding:10px 0 0 0;}
+.nav_c li{float:left; height:25px;}
+.nav_c li a{height:25px;text-indent:-9999px; overflow:hidden; display:block;}
+.home a{width:94px; background:url(../images/home.jpg);}
+.game_a a{width:70px; background:url(../images/yx.jpg);}
+.yxdm a{width:77px; background:url(../images/yxdm.jpg);}
+.news_a a{width:77px; background:url(../images/news.jpg);}
+.video_a a{width:70px; background:url(../images/sp.jpg);}
+.my2121 a{width:76px; background:url(../images/my2121.jpg);}
+.nav_c a:hover{ background-position:0 50px;}
+.on a{background-position:0 25px;}
+.supLink{float:right;}
+.supLink li{float:left; padding:0 12px 0 0;}
+.supLink li a{height:25px;text-indent:-9999px; overflow:hidden; display:block;}
+.change a{width:100px; background:url(../images/img/change.gif) no-repeat;}
+.yyjp a{width:100px; background:url(../images/yyjp.gif) no-repeat;}
+/*热门游戏*/
+.list_charct{position:relative;width:480px;_width:468px;height:165px;_height:155px;padding:2px;}
+ .list_charct li{float:left;position:relative;width:94px;height:79px;list-style-type:none;}
+.list_charct li.ong{z-index:999;}
+.list_charct li .link_charater{display:block;position:absolute;width:95px;height:76px;}
+.list_charct li.ong a{position:absolute;top:-6px;left:-6px;width:103px;height:88px;background-image:url(images/img/line_gametop.png);background-repeat:no-repeat;}
+.list_charct .new{position:absolute;top:0;left:0;background-position:0 0;width:34px;height:32px;font-size:0;line-height:0;text-indent:-9999em;}.section_focus .list_charct .ong .thumb{position:absolute;top:6px;left:6px;}
+.list_charct .ong .bg_tit{display:block;position:absolute;top:64px;left:6px;width:91px;height:14px;padding-top:4px;background:#000;opacity:.7;filter:Alpha(opacity=70);}
+ .list_charct .ong .tit{display:block;position:absolute;width:91px;height:14px;z-index:1;color:#fff;font-size:12px;letter-spacing:50px;line-height:14px;text-align:center;}
+ .list_charct .bg_tit{display:none;}
+
+ .list_charct li{float:left;position:relative;width:94px;height:79px;list-style-type:none;}
+.list_charct li.ong{z-index:999;}
+.list_charct li .link_charater{display:block;position:absolute;width:95px;height:76px;}
+.list_charct li.ong a{position:absolute;top:-6px;left:-6px;width:103px;height:88px;background-image:url(http://i1.daumcdn.net/image.kids/images/game/main/line_gametop.png);background-repeat:no-repeat;}
+.list_charct .new{position:absolute;top:0;left:0;background-position:0 0;width:34px;height:32px;font-size:0;line-height:0;text-indent:-9999em;}.section_focus .list_charct .ong .thumb{position:absolute;top:6px;left:6px;}
+.list_charct .ong .bg_tit{display:block;position:absolute;top:64px;left:6px;width:91px;height:14px;padding-top:4px;background:#000;opacity:.7;filter:Alpha(opacity=70);}
+ .list_charct .ong .tit{display:block;position:absolute;width:91px;height:14px;z-index:1;color:#fff;font-size:12px;letter-spacing:1px;line-height:14px;text-align:center;}
+ .list_charct .bg_tit{display:none;}

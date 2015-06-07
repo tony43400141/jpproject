@@ -1,0 +1,175 @@
+<{include file="$temple_folder/header.html"}>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<h1>
+	<span class="action-span1"> 分组管理 </span>
+	<div class="clear"></div>
+</h1>
+<div class="list-div" id="listDiv" >
+	<table width='100%' border="0" cellpadding="0" cellspacing="0" class="list-table" >
+		<tr class="tdbg" >
+			<td width="70" height="30" style="padding-left:5px;"><strong>快捷操作：</strong></td>
+			<td height="30"><a href="?action=groupmanage&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=groupmanage&do=add">添加分组</a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<{if $do== 'list'}>
+<div class="list-div" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+		<tr align="center" class="title">
+			<td  width="30" height="22"><strong> ID </strong></td>
+			<td height="22"><strong> 分组名</strong></td>
+			<td><strong> 权限</strong></td>
+			<td  width="150" height="22"><strong> 操作</strong></td>
+		</tr>
+		<{foreach from=$result item=r}>
+		<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+			<td  width="3%" height="22"><strong> <{$r.group_id}> </strong></td>
+			<td width="10%" height="22"><strong> <a href="?action=groupmanage&do=edit&id=<{$r.group_id}>"><{$r.group_name}></a></strong></td>
+			<td><strong> <{$r.group_rights}></strong></td>
+			<td  width="150" height="22"><strong> <a href="?action=groupmanage&do=delete&id=<{$r.group_id}>">删除</a>&nbsp;<a href="?action=groupmanage&do=edit&id=<{$r.group_id}>">修改</a></strong></td>
+		</tr>
+		<{/foreach}>
+	</table>
+</div>
+<{elseif $do == 'add'}>
+<form method="post" action="?action=groupmanage" name="form1" id="form1">
+<div class="list-div" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+    <tr class="title">
+      <td height="22" colspan="2"> <div align="center"><strong>添加分组</strong></div></td>
+    </tr>
+    <tr class="tdbg">
+      <td width="90" class="tdbg"><strong>分组名：</strong></td>
+      <td class="tdbg"><input name="groupname" id="groupname" type="text"> &nbsp;</td>
+    </tr>
+    <tr class="tdbg">
+      <td class="tdbg"><strong>权限：</strong></td>
+      <td class="tdbg">
+      	<{foreach from=$rights item=right key=key}>
+				<{if $key == 1}>
+				<div style="clear:both;"></div>
+				<{elseif $key == 2}>
+				<div style="clear:both;"></div>
+				<{else}>
+				<div style="clear:both;"></div>
+				<{/if}>
+					<{foreach from=$right item=right_val key=key1}>
+						<{if $right_val eq '-'}>
+						<div style="clear:both;height:5px;"></div>
+						<{else}>
+							<{if $key == $key1 }>
+								<div>
+									<div style="float:left;">
+										<input type="checkbox" name="grights[]" value="<{$key}>_<{$key1}>" />
+									</div>
+									<div style="float:left;line-height:25px; height:25px;"><{$right_val}></div>
+								</div>
+								<div style="clear:both;"></div>
+							<{else}>
+							<div style="float:left;margin-left:20px;">
+								<div style="float:left;">
+									<input type="checkbox" name="grights[]" value="<{$key}>_<{$key1}>" />
+								</div>
+								<div style="float:left;line-height:25px; height:25px;"><{$right_val}></div>
+								
+								
+							</div>
+							<{/if}>
+						<{/if}>
+					<{/foreach}>
+			<{/foreach}>
+      	<div class="clear"></div>
+		<div style="">
+			<input type="button" value="全选" onClick="checkbox_all('grights[]', 1);" />&nbsp;&nbsp;
+			<input type="button" value="全不选" onClick="checkbox_all('grights[]', 2)" />
+		</div>
+      </td>
+    </tr>
+	<tr class="tdbg">
+		<td colspan="2" style="display:none;align:center;color:red;" id="errorMessage"></td>
+	</tr>
+	<tr>
+		<td height="40" colspan="2" align="center" class="tdbg">
+		<input name="do" type="hidden" id="do" value="saveadd">
+		<input  type="submit" name="Submit" value="添加 " style="cursor:hand;">
+		&nbsp; <input name="Cancel" type="reset" id="Cancel" value="取消" onClick="javascript:history.go(-1);" style="cursor:hand;"></td>
+	</tr>
+	</table>
+</div>
+</form>
+
+<{elseif $do == 'edit'}>
+<form method="post" action="?action=groupmanage" name="form2" id="form2">
+<div class="list-div" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+    <tr class="title">
+      <td height="22" colspan="2"> <div align="center"><font size="2"><strong>修改分组信息</strong></font></div></td>
+    </tr>
+    <tr class="tdbg">
+      <td width="90 class="tdbg"><strong>分组名：</strong></td>
+      <td class="tdbg"><input name="groupname" id="groupname" value="<{$result.group_name}>" type="text"> &nbsp;</td>
+    </tr>
+	<tr class="tdbg">
+		<td class="tdbg"><strong>权限：</strong></td>
+		<td class="tdbg">
+			<{foreach from=$rights item=right key=key}>
+				<{if $key == 1}>
+				<div style="clear:both;"></div>
+				<{elseif $key == 2}>
+				<div style="clear:both;"></div>
+				<{else}>
+				<div style="clear:both;"></div>
+				<{/if}>
+					<{foreach from=$right item=right_val key=key1}>
+						<{if $right_val eq '-'}>
+						<div style="clear:both;height:5px;"></div>
+						<{else}>
+							<{if $key == $key1 }>
+								<div>
+									<div style="float:left;">
+										<input type="checkbox" name="grights[]" value="<{$key}>_<{$key1}>" <{if $result.group_rights[$key][$key1] == 1}>checked<{/if}> />
+									</div>
+									<div style="float:left;line-height:25px; height:25px;"><{$right_val}></div>
+								</div>
+								<div style="clear:both;"></div>
+							<{else}>
+							<div style="float:left;margin-left:20px;">
+								<div style="float:left;">
+									<input type="checkbox" name="grights[]" value="<{$key}>_<{$key1}>" <{if $result.group_rights[$key][$key1] == 1}>checked<{/if}> />
+								</div>
+								<div style="float:left;line-height:25px; height:25px;"><{$right_val}></div>
+								
+								
+							</div>
+							<{/if}>
+						<{/if}>
+					<{/foreach}>
+			<{/foreach}>
+			<div class="clear"></div>
+			<div style="">
+				<input type="button" value="全选" onClick="checkbox_all('grights[]', 1);" />&nbsp;&nbsp;
+				<input type="button" value="全不选" onClick="checkbox_all('grights[]', 2)" />
+			</div>
+			
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td colspan="2" style="display:none;align:center;color:red;" id="Message"></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" class="tdbg">
+		<input name="do" type="hidden" id="do" value="saveedit">
+		<input name="gid" type="hidden" value="<{$result.group_id}>" />
+		<input  type="submit" name="Submit" value="保存修改结果" style="cursor:hand;">
+		&nbsp;
+		<input name="Cancel" type="reset" id="Cancelbutton" value=" 取 消 " onClick="javascript:history.go(-1);" style="cursor:hand;"></td>
+	</tr>
+	</table>
+</div>
+</form>
+<{/if}>
+</body>
+</html>
+

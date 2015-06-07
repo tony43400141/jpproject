@@ -1,0 +1,54 @@
+<{include file="$temple_folder/header.html"}>
+<body>
+<script type="text/javascript">
+function go_cate_list(){
+	location.href ="?action=info&do=list";
+}	
+</script>
+<form method="post" action="?action=info&do=<{if $type == 'edit'}>update&id=<{$id}><{else}>insert<{/if}>" name="infod_form" id="infod_form" enctype="multipart/form-data">
+<h1>
+	<span class="action-span1"><strong>信息管理 -<{if $type == 'edit'}>修改信息<{else}>添加信息<{/if}></strong></span>
+</h1>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpinfoding="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=info&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=info&do=infod">添加信息</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+	<table width="100%" border="0" align="center" cellpinfoding="2" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>信息标题：</strong></td>
+		  <td width="1158" class="tdbg"><input name="title" id="title" type="text" value="<{$result[0].i_title}>" size="50"></td>
+		</tr>
+		<tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>信息类型：</strong></td>
+		  <td class="tdbg">
+		  	<select name="i_c" id="i_c">
+		  		<{foreach from=$cat item=v}>
+		  			<option value="<{$v.c_id}>" <{if $result[0].i_c == $v.c_id}>selected<{/if}> ><{$v.c_name}></option>
+		  		<{/foreach}>
+		  	</select>
+		  </td>
+		</tr>
+        <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>信息内容：</strong></td>
+		  <td class="tdbg">
+			<{$i_content}>
+		  </td>
+		</tr>
+		<tr>
+			<td height="40" colspan="2" align="center" class="tdbg">
+				<input id="dialog_edit" class="button"  type="submit" name="Submit" value="<{if $type == 'edit'}>保存<{else}>添加<{/if}>" style="cursor:hand;">
+				&nbsp;
+				<input name="Cancel" class="button" type="reset" id="Cancel" value="取消" style="cursor:hand;" onClick="go_cate_list();">
+			</td>
+		</tr>
+	</table>
+</div>
+</form>
+<{include file="$temple_folder/footer.html"}>
+

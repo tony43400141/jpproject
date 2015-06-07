@@ -1,0 +1,71 @@
+<{include file="$temple_folder/header.html"}>
+<script type="text/javascript">
+	var m_c_id;
+	function del_data(id){
+		m_c_id = id;
+		if(confirm("确定要删除吗？"))
+		{
+			$.ajax({ 														//一个Ajax过程
+						type: "POST", 						
+						url : "admin.php",										//与此php页面沟通
+						data: 'action=ip&do=del&id='+m_c_id, 		//发给php的数据有两项，分别是上面传来的u和p
+						success: function(result){								//如果调用php成功
+							location.href ="?action=ip&do=list";
+						}
+					});
+		}
+		}
+
+</script>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<input id="order_name" type="checkbox" value="<{$order_name}>" name="order_name" style="display:none;">
+<input id="order_by" type="checkbox" value="<{$order_by}>" name="order_by" style="display:none;">
+<h1>
+	<span class="action-span1"> Ip管理 </span>
+</h1>
+<div class="list-div" id="listDiv" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=ip&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=ip&do=add">添加ip</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+		<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+			<tr align="center" class="title" >
+				<th class="check_pointer" > ip1 </th>
+                <th class="check_pointer" > ip2 </th>
+                <th class="check_pointer" > ip3 </th>
+                <th class="check_pointer" > ip4 </th>
+                <th class="check_pointer" > 完整IP </th>
+                <th class="check_pointer" > 是否启用 </th>
+                <th class="check_pointer" > 操作 </th>
+				
+			</tr>
+		 <{foreach from=$result.result item=r}>
+			<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+				
+				<td height="22"> <{$r.ip1}></td>
+                <td height="22"> <{$r.ip2}></td>
+                <td height="22"> <{$r.ip3}></td>
+                <td height="22"> <{$r.ip4}></td>
+                 <td height="22"> <{$r.ip1}>.<{$r.ip2}>.<{$r.ip3}>.<{$r.ip4}></td>
+				 <td height="22"> <{if $r.isopen==1}>是<{else}>否<{/if}></td>
+				<td  width="150" height="22">
+					<a href="javascript:;" id="dialog_del" onClick="del_data(<{$r.ip_id}>);" >删除</a>&nbsp;
+					<a href="?action=ip&do=add&type=edit&id=<{$r.ip_id}>">修改</a>
+				</td>
+			</tr>
+		  <{/foreach}>
+		</table>
+		<div style="margin-top:10px;text-align:left;">
+			&nbsp;&nbsp;
+			总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+		</div>
+		<div class="clear"></div>
+</div>
+<{include file="$temple_folder/footer.html"}>
+

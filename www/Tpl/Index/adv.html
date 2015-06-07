@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>__WEBN__-咨询与申请</title>
+<include file="./Tpl/Public/header.html" />
+</head>
+
+<body>
+  <div class="allbg">
+    <!------------框架------------->
+    <div class="nywrapper">
+      <!------------左侧------------->
+      <div class="left nynav fl">
+        <include file="./Tpl/Public/lefter.html" />
+      </div>
+      <!------------最新信息------------->
+      <div class="nymain fr">
+        <div class="nytitle"><div class="fl"><div class="st fl" style="background:#202958"></div><h2 style="color:#202958;">咨询及申请</h2><div class="xx fr" style="width:520px;"></div></div></div>
+        <div class="consultation">
+		  <form action="" method="post">
+		  <p>请完成以下表单，我们会尽快联系你</p>
+		  <p><span>姓名：</span><input type="text" id="r_name" name="r_name" class="text" tabindex="100" value=""></p>
+		  <p><span>手机号码：</span><input type="text" id="r_mobile" name="r_mobile" class="text" tabindex="100" maxlength="11"></p>
+		  <p><span>邮箱地址：</span><input type="text" id="r_email" name="r_email" class="text" tabindex="100"></p>
+		  <p><span>内容：</span><textarea cols="20" rows="10" id='r_text'class="run"></textarea></p>
+		  <p class="fsan"><a href="javascript:void(0);" id="tf_submit"  onclick="inAdv();return false;"><img src="__IMG__images/fs.jpg" /></a></p><input type='hidden' name='mypretime' id="mypretime" value='0'> 
+		  </form>
+<script language="javascript" type="text/javascript">
+function inAdv()
+{
+        reg_name = null;
+		reg_email = null;
+		reg_mobile = null; 
+		reg_text = null;
+        if(reg_name === null) {
+            verifyName();
+        }
+		if(reg_mobile === null) {
+            verifyMobile();
+        }
+		if(reg_email === null) {
+            verifyEmail();
+        }
+		if(reg_text === null) {
+            verifyText();
+        }
+        if(!reg_name || (!reg_email && !reg_mobile)||!reg_text)
+        {
+			return false;
+		}
+        else
+		{
+			Today = new Date();
+			var NowHour = Today.getHours();
+			var NowMinute = Today.getMinutes();
+			var NowSecond = Today.getSeconds();
+			var mysec = (NowHour*3600)+(NowMinute*60)+NowSecond;
+			if((mysec-$('#mypretime').val())>30){
+			 $('#mypretime').val(mysec);
+			}
+			else{
+			   alert('按一次就够了，请勿重复提交！请耐心等待！谢谢合作！');
+			   return false;
+			}
+            $.ajax({
+			type:'post',
+			url:'<{:U("Index/addv/")}>',
+			data:{name:$('#r_name').val(),email:$('#r_email').val(),mobile:$('#r_mobile').val(),content:$('#r_text').val()},
+			cache:false,
+			dataType:'json',
+			success:function(data)
+			{
+				
+				alert(data.msn);
+			
+			}
+		
+			});
+		}
+}
+$('#r_name').blur(function(){
+	verifyName();
+});
+$('#r_mobile').blur(function(){
+	verifyMobile();
+});
+$('#r_email').blur(function(){
+	verifyEmail();
+});
+$('#r_text').blur(function(){
+	verifyText();
+});
+
+ 
+function verifyName(){
+	reg_name = true;
+	var name = $('#r_name').val();
+	if(!name || name.length<2 || name.length>5 || !(/^[\u4E00-\u9FA5]+$/.test(name))) {
+		$('#r_name').css('border-color','red');
+		reg_name = false;
+	}
+	else
+	{
+		$('#r_name').css('border-color','#BFBFBF');
+	}
+}
+    
+function verifyEmail(){
+	reg_email = true;
+	var email = $('#r_email').val();
+	if(!email ||!(/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/.test(email))) {
+		$('#r_email').css('border-color','red');
+		reg_email = false;
+	}
+	else
+	{
+		$('#r_email').css('border-color','#BFBFBF');
+	}
+}
+function verifyMobile(){
+	reg_mobile = true;
+	var mobile = $('#r_mobile').val();
+	if(!mobile ||!(/^(13[0-9]|14[0-9]|15[0|1|2|3|5|6|7|8|9]|18[0|3|5|6|7|8|9])\d{8}$/.test(mobile))) {
+		$('#r_mobile').css('border-color','red');
+		reg_mobile = false;
+	}
+	else
+	{
+		$('#r_mobile').css('border-color','#BFBFBF');
+	}
+}
+function verifyText(){
+	reg_text = true;
+	var text = trim($('#r_text').val());
+	if(!text || text=='') {
+		$('#r_text').css('border-color','red');
+		reg_text = false;
+	}
+	else
+	{
+		$('#r_text').css('border-color','#BFBFBF');
+	}
+}
+function trim(str)
+{ 
+ return str.replace(/(^\s*)|(\s*$)/g, '');
+}
+</script>
+        </div>
+    </div>
+   <include file="./Tpl/Public/footer.html" />
+    </div>
+  </div>
+</body>
+</html>

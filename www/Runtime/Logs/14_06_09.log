@@ -1,0 +1,704 @@
+[ 2014-06-09T01:02:16+08:00 ] 115.213.135.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000453s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000173s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000200s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012888s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000253s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000216s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000166s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001047s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000384s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000432s ]
+
+[ 2014-06-09T01:13:36+08:00 ] 123.125.71.53 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000492s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000313s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000171s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000214s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012963s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000269s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000216s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000134s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001048s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000355s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2014-06-09T01:14:21+08:00 ] 220.181.108.115 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000426s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000314s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000172s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000191s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015766s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000279s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000224s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000138s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001046s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004049s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004100s ]
+
+[ 2014-06-09T02:10:08+08:00 ] 220.181.108.90 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000426s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000291s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000171s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000216s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013115s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000277s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000272s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000137s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001102s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000370s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2014-06-09T02:10:17+08:00 ] 123.125.71.50 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000442s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000306s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000170s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000191s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012844s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000253s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000238s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000133s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000372s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2014-06-09T03:12:47+08:00 ] 123.125.71.15 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000471s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000293s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000178s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000194s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013208s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000267s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000216s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000136s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001092s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2014-06-09T03:13:51+08:00 ] 220.181.108.115 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000445s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000293s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000171s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000201s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012803s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000263s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000234s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000159s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001124s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000369s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2014-06-09T04:17:56+08:00 ] 123.125.71.14 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000429s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000293s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000177s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000194s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016321s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000288s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000218s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000135s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001044s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000400s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2014-06-09T04:18:01+08:00 ] 220.181.108.80 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000502s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000319s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000173s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000220s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025644s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000296s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000217s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000136s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001068s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000357s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2014-06-09T07:10:27+08:00 ] 220.181.108.80 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000457s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000287s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000175s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000194s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012791s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000249s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000237s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000134s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001019s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000404s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2014-06-09T07:10:38+08:00 ] 123.125.71.25 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000558s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000191s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000192s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012759s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000264s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000236s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000136s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001039s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000426s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2014-06-09T07:58:50+08:00 ] 220.181.108.163 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000443s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000303s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000173s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000214s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013147s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000277s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000215s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000142s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001093s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000354s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2014-06-09T07:59:52+08:00 ] 123.125.71.54 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000482s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000284s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000170s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000441s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013185s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000280s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000287s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000141s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001155s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000356s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2014-06-09T09:14:59+08:00 ] 123.125.71.60 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000424s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000329s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000176s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000191s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012800s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000278s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000214s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000133s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001023s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000406s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2014-06-09T09:15:23+08:00 ] 220.181.108.113 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000452s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000193s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000192s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012913s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000260s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000236s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000135s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001078s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000376s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2014-06-09T09:16:53+08:00 ] 116.226.83.33 /index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000494s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000440s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000174s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000222s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013027s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000266s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000241s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000139s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001059s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000376s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2014-06-09T09:17:11+08:00 ] 116.226.83.33 /index/getCartoon?_=1402276636597
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000479s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000617s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000411s ]
+
+[ 2014-06-09T09:34:03+08:00 ] 116.226.83.33 /admin.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000558s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+ERR: 无法加载模块:Admin
+
+[ 2014-06-09T09:34:18+08:00 ] 116.226.83.33 /%3C?=$url_forward%20;%20?%3E
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000502s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8] Undefined variable: group /alidata/www/pierrot/www/ThinkPHP/Lib/Core/App.class.php 第 95 行.
+ERR: 无法加载模块:
+
+[ 2014-06-09T09:36:11+08:00 ] 180.168.58.182 /%3C?=$url_forward%20;%20?%3E
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000503s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] Undefined variable: group /alidata/www/pierrot/www/ThinkPHP/Lib/Core/App.class.php 第 95 行.
+ERR: 无法加载模块:
+
+[ 2014-06-09T09:36:37+08:00 ] 180.168.58.182 /%3C?=$url_forward%20;%20?%3E
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000526s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [8] Undefined variable: group /alidata/www/pierrot/www/ThinkPHP/Lib/Core/App.class.php 第 95 行.
+ERR: 无法加载模块:
+
+[ 2014-06-09T09:38:49+08:00 ] 180.168.58.182 /%3C?=$url_forward%20;%20?%3E
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000490s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] Undefined variable: group /alidata/www/pierrot/www/ThinkPHP/Lib/Core/App.class.php 第 95 行.
+ERR: 无法加载模块:
+
+[ 2014-06-09T09:39:14+08:00 ] 180.168.58.182 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000496s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000173s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000222s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012727s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000255s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000215s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000142s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001108s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000350s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2014-06-09T09:39:14+08:00 ] 180.168.58.182 /index/getCartoon?_=1402277938166
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000488s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000550s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000401s ]
+
+[ 2014-06-09T09:39:55+08:00 ] 116.226.83.33 /admin.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000532s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+ERR: 无法加载模块:Admin
+
+[ 2014-06-09T09:39:55+08:00 ] 116.226.83.33 /index/getCartoon?_=1402278003016
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000551s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000574s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000422s ]
+
+[ 2014-06-09T09:39:59+08:00 ] 116.226.83.33 /index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000482s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000427s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000172s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000217s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012962s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000255s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000219s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000153s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001027s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000348s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2014-06-09T09:39:59+08:00 ] 116.226.83.33 /index/getCartoon?_=1402278007306
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000507s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000551s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000413s ]
+
+[ 2014-06-09T09:40:46+08:00 ] 180.168.58.182 /index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000482s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000317s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000204s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000246s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014229s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000262s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000236s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000136s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001065s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000370s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2014-06-09T09:40:47+08:00 ] 180.168.58.182 /index/getCartoon?_=1402278030684
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000490s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000619s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000413s ]
+
+[ 2014-06-09T09:43:09+08:00 ] 116.226.83.33 /index/contact.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000483s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007868s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000227s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000218s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000135s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001011s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000373s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2014-06-09T09:43:09+08:00 ] 116.226.83.33 /index/getCartoon?_=1402278197435
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000546s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000592s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000405s ]
+
+[ 2014-06-09T09:43:11+08:00 ] 116.226.83.33 /index/contact.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000562s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007925s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000254s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000229s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000143s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001038s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000401s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000453s ]
+
+[ 2014-06-09T09:43:11+08:00 ] 116.226.83.33 /index/getCartoon?_=1402278199260
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000476s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000565s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000390s ]
+
+[ 2014-06-09T09:43:15+08:00 ] 116.226.83.33 /index/business.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000550s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008591s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000284s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000255s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000148s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001116s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000411s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2014-06-09T09:43:15+08:00 ] 116.226.83.33 /index/getCartoon?_=1402278203378
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003678s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003752s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000588s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000386s ]
+
+[ 2014-06-09T09:43:19+08:00 ] 116.226.83.33 /index/business.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000507s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007888s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000229s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000218s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000160s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001002s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000363s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2014-06-09T09:43:19+08:00 ] 116.226.83.33 /index/getCartoon?_=1402278206873
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000533s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000552s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000392s ]
+
+[ 2014-06-09T09:45:45+08:00 ] 124.77.139.147 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `db_ad` [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `db_news` [ RunTime:0.000432s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=1 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000317s ]
+SQL: SELECT * FROM `db_ad` WHERE ( ad_open=1 AND c_id=2 ) ORDER BY `update_time` desc LIMIT 4   [ RunTime:0.000176s ]
+SQL: SELECT * FROM `db_news` WHERE ( is_display=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 8   [ RunTime:0.000199s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012939s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000267s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000217s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000136s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001050s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000382s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2014-06-09T09:45:45+08:00 ] 124.77.139.147 /index/getCartoon?_=1402278266609
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000513s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `db_gamea` [ RunTime:0.000566s ]
+SQL: SELECT * FROM `db_gamea` WHERE ( is_display=1 AND is_m=1 ) ORDER BY `is_order` DESC,`add_time` DESC LIMIT 5   [ RunTime:0.000421s ]
+

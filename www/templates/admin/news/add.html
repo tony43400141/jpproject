@@ -1,0 +1,75 @@
+<{include file="$temple_folder/header.html"}>
+<body>
+<script type="text/javascript">
+function go_cate_list(){
+	location.href ="?action=news&do=list";
+}	
+</script>
+<form method="post" action="?action=news&do=<{if $type == 'edit'}>update&id=<{$id}><{else}>insert<{/if}>" name="newsd_form" id="newsd_form" enctype="multipart/form-data">
+<h1>
+	<span class="action-span1">新闻管理-<strong><{if $type == 'edit'}>修改新闻<{else}>添加新闻<{/if}></strong></span>
+</h1>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpnewsding="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=news&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=news&do=newsd">添加新闻</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+	<table width="100%" border="0" align="center" cellpnewsding="2" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>新闻标题：</strong></td>
+		  <td width="1158" class="tdbg"><input name="title" id="title" type="text" value="<{$result[0].n_title}>" size="50"></td>
+		</tr>
+		<tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>新闻封面图片：</strong></td>
+		  <td class="tdbg">
+			<{if $result[0].n_pic }>
+				<img  border="0" alt="" src="<{$result[0].n_pic}>" id="" width="200"><br>
+			<{/if}>
+			<input name="img" id="img" type="file" value="<{$result[0].n_pic}>" size="50">
+			</td>
+		</tr>
+        <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>是否显示：</strong></td>
+		  <td class="tdbg">
+          <input type="radio" <{if $result[0].is_display == 1}>checked="checked"<{/if}> <{if !$result[0].is_display}>checked="checked"<{/if}> value="1"  name="is_display">显示
+		 <input type="radio" <{if $result[0].is_display == 0 && isset($result[0].is_display)}> checked="checked" <{/if}> value="0"  name="is_display">隐藏
+			
+            (说明:隐藏就是该新闻不显示)
+		  </td>
+		</tr>
+         <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>排序：</strong></td>
+		  <td class="tdbg">
+			<input type='text' name="is_order" value="<{$result[0].is_order}>"/>(说明：填写0-255的数字，越大显示越靠前)
+		  </td>
+		</tr>
+      
+      <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>新闻摘要：</strong></td>
+		  <td class="tdbg">
+			<textarea name="n_sum" id="n_sum" cols="30" rows="10"><{$result[0].n_sum}></textarea>
+		  </td>
+		</tr>
+        <tr class="tdbg">
+		  <td width="145" class="tdbg right_title"><strong>新闻内容：</strong></td>
+		  <td class="tdbg">
+			<{$n_content}>
+		  </td>
+		</tr>
+		<tr>
+			<td height="40" colspan="2" align="center" class="tdbg">
+				<input id="dialog_edit" class="button"  type="submit" name="Submit" value="<{if $type == 'edit'}>保存<{else}>添加<{/if}>" style="cursor:hand;">
+				&nbsp;
+				<input name="Cancel" class="button" type="reset" id="Cancel" value="取消" style="cursor:hand;" onClick="go_cate_list();">
+			</td>
+		</tr>
+	</table>
+</div>
+</form>
+<{include file="$temple_folder/footer.html"}>
+

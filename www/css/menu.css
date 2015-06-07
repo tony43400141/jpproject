@@ -1,0 +1,36 @@
+@charset "utf-8";
+#account .hyzx a{background-position:0 -48px;}
+#account_reg .hyzx a{background-position:0 -48px;}
+#account_order .hyzx a{background-position:0 -48px;}
+#account_f .hyzx a{background-position:0 -48px;}
+#account_m .hyzx a{background-position:0 -48px;}
+#account_mail .hyzx a{background-position:0 -48px;}
+#account_info .hyzx a{background-position:0 -48px;}
+#account_find .hyzx a{background-position:0 -48px;}
+#account_pwd .hyzx a{background-position:0 -48px;}
+#account_editpwd .hyzx a{background-position:0 -48px;}
+
+
+
+#account #user_login a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_reg #register a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_order #order a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_f #fcmsys a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_m #update a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_mail #mail a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_info #info a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_find #find a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_pwd #find a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+#account_editpwd #editpwd a {background:url(../images/menu_c_on_bg.jpg) no-repeat;color:#586ffa;}
+
+
+/*���������Ƽ�*/
+#home .home a{background-position:0 -48px;}
+#list .xwgg a{background-position:0 -48px;}
+#server .yxdt a{background-position:0 -48px;}
+
+#userti{position:absolute;width:210px;height:45px;line-height:30px;color:#ff0000;float:left; text-align:center;top:-45px;z-index:1000;left:0px;background:url(../images/ti.gif);display:none;}
+
+#wordti{position:absolute;width:210px;height:45px;float:left;line-height:30px;color:#ff0000; text-align:center;top:-45px;z-index:1000;left:0px;background:url(../images/ti.gif);display:none;}
+#lu{position:relative;}
+#lp{position:relative;}

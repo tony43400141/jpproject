@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>火影独家授权_动漫形象授权—皮乐中国(Pierrot China)正版日漫授权公司</title>
+<meta name="Keywords" content="皮乐中国、Pierrot China、正版动漫授权、火影授权、日漫授权、正版火影授权、动漫形象授权" />
+<meta name="Description" content="Pierrot China(皮乐中国)是日本Pierrot株式会社联合知名风险投资基金SIG在上海成立的控股子公司，成为中国地区一家专业的正版日漫授权管理运营公司，拥有日本正版火影忍者等多项动漫形象授权" />
+<include file="./Tpl/Public/header.html" />
+</head>
+<body>
+  <div class="allbg">
+    <!------------框架------------->
+    <div class="wrapper">
+      <!------------幻灯片js------------->
+      <js href="__JS__slidejs.js" />
+        <!------------幻灯片------------->
+        <div id="focus">
+          <ul>
+          <volist name='banner' id='vo'>
+            <li><a href="<{$vo.ad_web}>" target="_blank"><img src="/<{$vo.ad_pic}>" alt="<{$vo.ad_title}>" /></a></li>
+         </volist>
+          </ul>
+        </div>
+        <!------------内容------------->
+        <div class="main">
+        <!------------左侧------------->
+        <div class="left fl">
+    	 <include file="./Tpl/Public/lefter.html" />
+        </div>
+      <!------------右侧------------->
+      <div class="right fr">
+        <!------------最新信息------------->
+        <div class="new fl">
+          <div class="title"><div class="st fl"></div><h2 style="color:#009999;">最新信息</h2><div class="xx fr"></div></div>
+          <div class="newmain fl gray">
+            <ul>
+            <volist name="newslist" id="vo" key="i">
+            <if condition="$i lt 5">
+              <li><div class="newimg"><a href="<{:U('Index/ndetail',array('nid'=>$vo['n_id']))}>" target="_blank"><img src="<{$vo.n_pic}>" style=" width:90px; height:90px;"/></a></div><div class="newnr">
+                <h2 class="blun"><a href="<{:U('Index/ndetail',array('nid'=>$vo['n_id']))}>" target="_blank"><{$vo['n_title']|mb_substr=0,14,'UTF-8'}></a></h2>
+              <span><{$vo['add_time']|date="Y.m.d",###}></span>
+              <p><a href="<{:U('Index/ndetail',array('nid'=>$vo['n_id']))}>" target="_blank"><{$vo['n_sum']|mb_substr=0,41,'UTF-8'}></a></p></div></li>
+				<else />
+			  <li><h2 class="blun"><a href="<{:U('Index/ndetail',array('nid'=>$vo['n_id']))}>" target="_blank"><{$vo['n_title']|mb_substr=0,23,'UTF-8'}></a></h2><span><{$vo['add_time']|date="Y.m.d",###}></span></li> 
+              </if>
+              </volist>  
+            </ul>
+            <div class="newmore fl"><a href="<{:U('Index/nlist')}>" target="_blank">查看全部 ></a></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+		<!------------合作项目------------->
+        <div class="hzxm fl"><div class="title"><div class="hzxmst fl"></div><h2 style="color:#186fcb;">我们的作品</h2><div class="xx fr" style="width:520px;"></div></div>
+        <div class="hzxmmain">
+        <volist name='cooperation' id='vo'>
+		  <a href="<{$vo.ad_web}>" target="_blank" alt="<{$vo.ad_title}>"><img src="/<{$vo.ad_pic}>" alt="<{$vo.ad_title}>" /></a>
+          </volist>
+          </ul>
+        </div>
+        </div>
+        <!------------合作公司------------->
+  <div class="clear"></div>
+  
+  <div class="home_brand">
+      <div class="home_brand_title"></div>
+        <div id="demo">
+        <div id="indemo">
+        <div id="demo1">
+          <volist name='adMembers' id='vo'>
+          <span class="home_brand_line"> <a href="<{$vo.ad_web}>" target="_blank"><img src="/<{$vo.ad_pic}>" border="0"  alt="<{$vo.ad_title}>"/></a></span>
+          </volist>      
+        </div>
+        <div id="demo2"></div>
+        </div>
+        </div>
+        <script>
+<!--
+var speed=20;
+var tab=document.getElementById("demo");
+var tab1=document.getElementById("demo1");
+var tab2=document.getElementById("demo2");
+tab2.innerHTML=tab1.innerHTML;
+function Marquee(){
+if(tab2.offsetWidth-tab.scrollLeft<=0)
+tab.scrollLeft-=tab1.offsetWidth
+else{
+tab.scrollLeft++;
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+-->
+</script>
+        <div class="home_brand_icon"></div>
+     </div>
+      </div>
+    </div>
+
+	<!------------底部版权------------->
+   <include file="./Tpl/Public/footer.html" />
+    </div>
+  </div>
+</body>
+</html>

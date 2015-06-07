@@ -1,0 +1,15 @@
+@charset "utf-8";
+.footer{background:url(../../images/php_index/foot_bg.jpg) #fff repeat-x;}
+.footer_c{width:1002px; padding:14px 0; margin:0 auto;position:relative;}
+.top{width:22px; height:30px; text-indent:-9999px; background:url(../../images/php_index/top.jpg) no-repeat; position:absolute; right:0; top:0; z-index:9999; overflow:hidden;}
+.footer ul ul li{ display:inline;}
+.friendLinks{width:820px;margin:0 auto 5px;padding:0 5px 5px 5px;overflow:hidden;border-bottom:1px dashed #ededed;}
+.friendLinks li{height:24px;overflow:hidden; float:left;padding:0 5px;line-height:24px;}
+.friendLinks li a{display:block;}
+.foot_links{ float:left;display:block; margin:0 auto ;text-align:center;height:auto   !important;height:21px;min-height:21px; line-height:21px;}
+.foot_links li{padding:5px 10px;display:block; height:21px; overflow:hidden; float:left;}
+.footer a:hover{ text-decoration:underline;}
+.footer_list{*margin:-10px 0 0;line-height:30px; text-align:center;}
+.footer_nav li{border-right:1px solid #696969;padding:0 8px;}
+.footer_nav .lsxy{padding:0 8px 0 25px; background:url(../../images/php_index/icon_6.jpg) 5px 0 no-repeat;}
+.cert{height:41px;}

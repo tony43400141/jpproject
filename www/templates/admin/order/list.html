@@ -1,0 +1,127 @@
+<{include file="$temple_folder/header.html"}>
+<script language="javascript" type="text/javascript" src="libs/My97DatePicker/WdatePicker.js"></script>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<input id="order_name" type="checkbox" value="<{$order_name}>" name="order_name" style="display:none;">
+<input id="order_by" type="checkbox" value="<{$order_by}>" name="order_by" style="display:none;">
+<h1>
+	<span class="action-span1">充值管理 </span>
+</h1>
+<div class="form-div">
+	  <form action="?action=order&do=list" name="searchForm" method="post">
+	    
+	    订单号
+	    <input type="text" name="order_no" value="<{$order_no}>" size="30" />
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名
+	    <input type="text" name="username" value="<{$username}>" size="20" />
+        &nbsp;&nbsp;价格
+	    <input type="text" name="minprice" value="<{$minprice}>" size="5" />
+        ----
+	    <input type="text" name="maxprice" value="<{$maxprice}>" size="5" />
+	    充值类型：
+	   <select name="order_type">
+	   			<option value="0">请选择充值类型</option>
+	   			<{foreach from=$orderType item=ot key=k}>
+                <option value="<{$k}>" <{if $order_type==$k}>selected<{/if}>><{$ot}></option>
+                <{/foreach}>
+		</select>
+       支付类型：
+	   <select name="charge_type">
+	   			<option value="0">请选择支付类型</option>
+                <{foreach from=$chargeType item=ct key=k}>
+                <option value="<{$k}>" <{if $charge_type==$k}>selected<{/if}>><{$ct}></option>
+                <{/foreach}>
+	   		
+		</select>
+        订单状态：
+	   <select name="order_status">
+	   			<option value="0">请选择订单状态</option>
+                <{foreach from=$orderS item=os key=k}>
+                <option value="<{$k}>" <{if $order_status==$k}>selected<{/if}>><{$os}></option>
+                <{/foreach}>
+	   		
+		</select>
+        <div style="margin-top:10px;">
+        	充值游戏:
+		<select name="game_id" id="game_id" onChange="getServer();" style="width:100px;">
+			<option value="0">请选择游戏</option>
+			<{foreach from=$str item=g}>
+				<option value="<{$g.id}>"><{$g.game_name}></option>
+			<{/foreach}>
+		</select>
+        <select name="server_id" id="server_id" style="width:100px;">
+			<option value="0">请选择游戏区服</option>
+		</select>
+         下单日期:
+	    <input type="text" name="dateFrom" value="<{$dateFrom}>" size="10"  onClick="WdatePicker();" style="width:100px;"/>
+	    -----
+	    <input type="text" name="dateTo" value="<{$dateTo}>" size="10" onClick="WdatePicker();" style="width:100px;"/>
+        <input type="radio"  name="searchType"  value="1" <{if $searchType==1}>checked<{/if}> />精确搜索
+        <input type="radio"  name="searchType" value="0" <{if $searchType==0}>checked<{/if}> />模糊搜索
+	    <input type="submit" value=" 搜索 " class="button" />
+        </div>
+	  </form>
+	</div>
+<{if $result}>
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer"> 用户名(uid) </th>
+					<th class="check_pointer"> 订单号 </th>
+					<th class="check_pointer"> 充值类型 </th>
+                    <th class="check_pointer"> 支付类型 </th>
+                    <th class="check_pointer"> 充值游戏 </th>
+                    <th class="check_pointer"> 充值金额 </th>
+                    <th class="check_pointer"> 实际金额 </th>
+                    <th class="check_pointer"> 充值时间 </th>
+                    <th class="check_pointer"> 订单状态 </th>
+                    <th class="check_pointer"> 订单说明 </th>
+					<th>订单错误信息</th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td height="22" align="left"> <{$r.username}>(<{$r.uid}>)</td>
+					<td height="22" align="left"> <{$r.order_no}></td>
+					<td height="50" > <{$orderType[$r.order_type]}></td>
+					<td height="50" > <{$chargeType[$r.charge_type]}></td>
+                    <td height="100" > <{$r.game_name}></td>
+					<td  width="50" height="22"> <{$r.order_money}> </td>
+                    <td  width="50" height="22"> <{$r.real_money}> </td>
+                    <td height="22"> <{$r.add_time|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+                    <td height="22" align="left"> <{$orderS[$r.order_status]}></td>
+					<td height="22" align="left"> <{$r.remark}></td>
+					<td height="22" > <{$r.error_remark}></td>
+				</tr>
+			  <{/foreach}>
+			</table>
+            <div style="margin-top:10px;text-align:right; font-size:14px;">
+				充值金额总计：<{$result.sum.omoney}>&nbsp;&nbsp;实际金额总计：<{$result.sum.rmoney}>
+			</div>
+            
+			<div style="margin-top:10px;text-align:left;">
+				总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+			</div>
+</div>
+<{/if}>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+						   $('#game_id').val('<{$game_id}>');
+						   getServer();
+						   });
+function getServer()
+{
+	$.ajax({
+		type:'post',
+		url:'?action=order&do=getServer',
+		data:{game_id:$('#game_id').val()},
+		cache:false,
+		success:function(_option)
+		{
+			$('#server_id').html(_option);
+			$('#server_id').val('<{$server_id}>');
+		}
+		
+	});
+}
+</script>
+<{include file="$temple_folder/footer.html"}>
+

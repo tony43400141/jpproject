@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="zh-CN">
+	<meta name="keywords" content="_开服,更新,维护,合服,游戏资讯">
+    <meta name="description" content="__WEBN__网页游戏平台（__WEBD__）是专业的网页游戏娱乐平台,这里汇集了好玩的网页游戏!网页游戏开服表和排行榜.是玩家玩网页游戏的首选网页游戏大全网站!">
+    <css href="__CSS__base.css" />
+    <css href="__CSS__header.css" />
+    <css href="__CSS__footer.css" />
+    <css href="__CSS__css.css" />
+    <css href="__CSS__news.css" />
+    <link type="image/x-icon" href="http://__WEBD__/favicon.ico" rel="icon">
+    <link type="image/x-icon" href="http://__WEBD__/favicon.ico" rel="shortcut icon">
+    <js href="__JS__jquery.min.js" />
+    <js href="__JS__jquery.cookie.js" /></script>
+    <script type="text/javascript">var _M = 'default',_C = 'index',_A = 'news';</script>
+        <title><{$detail['article_title']}> – __WEBN__</title>
+</head>
+<body youdao="bind">
+<!-- header -->
+<include file="./Tpl/Index/header.html" /> 
+<!-- header -->
+    <div class="news_middle">
+    <div class="wrapper">
+        <div class="cf layout-news">
+            <div class="col-1" style="width:700px;_width:680px;">
+                <div class="newslist">
+                    <div class="news_title">
+                        当前位置：<a href="<{:U('Index/index')}>">首页</a> >> <a href="<{:U('Article/index')}>"> 游戏资讯</a>>> <em><{$detail['article_title']}></em>
+                    </div>
+                    <div class="news_con">
+                        <div class="cf pbody" style="margin: 5px 0 0">
+                            <div class="heading">
+                                <h2><{$detail['article_title']}></h2>
+                                <div class="author">
+                                    <p>作者: __WEBN__网页游戏 &nbsp; &nbsp; 时间: <{$detail['add_time']|date="Y-m-d",###}>                                        <span>
+                                            <input type="text" value=" __WEBN__网页游戏" class="soso">
+                                            <input type="button" class="soso-btn" onClick="window.open('http://www.baidu.com/s?wd=__WEBN__%E7%BD%91%E9%A1%B5%E6%B8%B8%E6%88%8F')" value="百度一下">
+                                        </span>
+                                    </p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="newsarticle"><{$detail['article_content']}></div>
+                         <!--   <div class="iconlink">
+                                <a class="iconlink1" href="<{:U('Index/index')}>">返回首页</a>
+                                <a class="iconlink2" href="" target="_blank">游戏官网</a>
+                                <a class="iconlink3" href="" target="_blank">进入游戏</a>
+                            </div>-->
+                            <div class="line"></div>
+                            <div class="artlink">
+                                
+                                <div class="clear"></div>
+                            </div>
+                            <div class="pagination page"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-2" style="width:285px">
+            <div class="serverbox">
+    <div class="title">
+        <div class="left lefthover" id="__tabs_1">最新开服动态</div>
+        <div class="right" id="__tabs_2">一周内新服推荐</div>
+        <div class="clear"></div>
+    </div>
+    <div class="zxkfdt" id="_tabs_1">
+        <div class="tb-thead">
+            <table>
+                <tbody><tr>
+                    <td>日期	</td>
+                    <td>时间</td>
+                    <td>游戏名称</td>
+                    <td>区服</td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="tb-body" id="_serverlist">
+         <volist name="openinfo" id="vo" key='i'>       
+                    <div class="server-list" <if condition="$i gt 10">style="display:none;" </if>>
+                    <p class="date"><{$vo.open_time|date="m-d",###}></p>
+                    <p class="time"><{$vo.open_time|date="H:i",###}></p>
+                    <p class="game"><a style="" href="<{:U('Game/glist',array('gameId'=>$vo[game_id]))}>"><{$vo.game_name}></a></p>
+                    <p class="server" style="height:28px">
+                        <a href="<{$vo.game_url}>">
+                        双线<{$vo.area_name}>服</a>
+                                        </p>
+                    <div class="clear"></div>
+                </div>
+                </volist> 
+           
+          </div>
+        <div class="jspage" id="_jpage">
+            <a href="javascript:" class="on pngfix">1</a>
+            <a href="javascript:" class="pngfix">2</a>
+        </div>
+    </div>
+    <div class="yzxfdt" style="display: none;" id="_tabs_2">
+        <div class="tb-thead">
+            <table>
+                <tbody><tr>
+                    <td width="70">游戏	</td>
+                    <td width="120">服务区</td>
+                    <td>新手卡</td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="tb-body">
+             <volist name="wres" id="vo">
+           <div class="server-list">
+                <p class="game" style="width:90px;"><a style="color:#028300" href="<{:U('Game/glist',array('gameId'=>$vo[game_pid]))}>"><{$vo[gname]}></a></p>
+                <p class="server" style="width:120px;"><a href="<{:U('Game/glist',array('gameId'=>$vo[game_pid]))}>">双线<{$vo.server_flag}>服[S<{$vo.server_flag}>]</a></p>
+                <p class="card" style="width:60px;"><a href="<{:U('Code/index',array('gid'=>$vo[game_pid],'sid'=>$vo[id]))}>">&nbsp;</a></p>
+                <div class="clear"></div>
+            </div>
+         </volist>       
+                    </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    $('#__tabs_1').bind('click',function(){
+        $(this).addClass('lefthover');
+        $('#__tabs_2').removeClass('righthover');
+        $('#_tabs_1').show();
+        $('#_tabs_2').hide();
+    })
+    $('#__tabs_2').bind('click',function(){
+        $(this).addClass('righthover');
+        $('#__tabs_1').removeClass('lefthover');
+        $('#_tabs_1').hide();
+        $('#_tabs_2').show();
+    })
+
+    $('#_jpage').find('a').click(function(){
+        var curPage = $(this).text();
+        $('#_jpage').find('a').removeClass('on');
+        $(this).addClass('on');
+        $('#_serverlist').find('div.server-list').toggle();
+    });
+    
+	$('a._j_sname').hover(function(){$(this).hide();$(this).next().show();},function(){});
+    $('a._j_remind').hover(function(){},function(){$(this).hide();$(this).prev().show();});
+});
+</script>
+<p class="gameph">热门游戏排行</p>
+<table width="288" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+    <tbody>
+      <volist name="glist" id="vo" k="i" offset="1" length='12'>
+            <tr>
+            <td width="41"><span class="<if condition='$i lt 4'>number_red<else/>number_blue</if>"><{$i}></span></td>
+            <td width="53"><img src="__IMG__<{$vo.g_pic}>" width="27" height="28"></td>
+            <td width="84"><a href="<{:U('Game/glist',array('gameId'=>$vo['id']))}>" class="red"><{$vo.game_name}></a></td>
+            <td width="73"><span class="enter_red"><a href="<{:U('Game/ginfo',array('cgId'=>$vo['gserver'][0]['id']))}>" target="_blank">进入新服</a></span></td>
+        </tr>
+    </volist> 
+        </tbody>
+</table>
+        </div>
+        <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+<include file="./Tpl/Index/fooer.html" /> 
+<!-- header -->
+<!--[if IE 6]>
+<js href="__JS__DD_belatedPNG_0.0.8a-min.js" />
+<script type="text/javascript">
+    DD_belatedPNG.fix('.slide-pages a,.userbox,.pngfix,background');
+    DD_belatedPNG.fix('.pngfiximg,img');
+</script>
+<![endif]-->    
+<js href="__JS__common.js" />
+</body></html>

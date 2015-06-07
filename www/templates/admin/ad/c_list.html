@@ -1,0 +1,57 @@
+<{include file="$temple_folder/header.html"}>
+<script type="text/javascript">
+function del_data(_cid)
+{
+	if(confirm('确定删除吗'))
+	{
+		$.ajax({ 														
+				type: "POST", 						
+				url : "admin.php&action=ad&do=c_del",										
+				data: {id:_cid}, 		
+				success: function(result){								
+					location.reload();
+				}
+			});
+	}
+}
+</script>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<h1>
+	<span class="action-span1"> 广告分类管理 </span>
+</h1>
+<div class="list-div" id="listDiv" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=ad&do=clist">首页</a>&nbsp;|&nbsp;<a href="?action=ad&do=c_add">添加广告分类</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+		<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+			<tr align="center" class="title" >
+				<th class="check_pointer"> 名称 </th>
+				<th> 描述 </th>
+				<th> 操作向导 </th>
+			</tr>
+		 <{foreach from=$result.result item=r}>
+			<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+				<td height="22"><{$r.c_name}></td>
+				<td> <{if $r.c_desc}><{$r.c_desc|truncate:60}><{/if}></td>
+				<td  width="150" height="22">
+					<!--<a href="javascript:;" id="dialog_del" onClick="del_data(<{$r.c_id}>);" >删除</a>-->&nbsp;
+					<a href="?action=ad&do=c_add&type=edit&id=<{$r.c_id}>">修改</a>
+				</td>
+			</tr>
+		  <{/foreach}>
+		</table>
+		<div style="margin-top:10px;text-align:left;">
+			&nbsp;&nbsp;
+			总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+		</div>
+		<div class="clear"></div>
+</div>
+<{include file="$temple_folder/footer.html"}>
+

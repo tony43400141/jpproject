@@ -1,0 +1,76 @@
+<{include file="$temple_folder/header.html"}>
+<body>
+<script type="text/javascript">
+function go_cate_list(){
+	location.href ="?action=article&do=category";
+}
+
+$(function(){	
+	// Dialog
+	$('#dialog').dialog({
+		autoOpen: false,
+		show: "blind",
+		hide: "explode",
+		width: 600,
+		buttons: {
+			"Ok": function() {
+			$(this).dialog("close");
+			},
+			"Cancel": function() {
+				$(this).dialog("close");
+			}
+		}
+	});
+	// Dialog Edit
+	$('#dialog_edit').click(function(){
+		if($("#mc_name").val() == ''){
+			$('#dialog').dialog('open');
+			$('#dialog').html('文章名称不能为空。');
+			return false;
+		}
+		if($("#mc_desc").val() == ''){
+			$('#dialog').dialog('open');
+			$('#dialog').html('文章说明不能为空。');
+			return false;
+		}
+	});
+});
+</script>
+<form method="post" action="?action=article&do=<{if $type == 'edit'}>category_update&id=<{$id}><{else}>category_insert<{/if}>" name="add_form" id="add_form">
+<h1>
+	<span class="action-span1">文章分类管理  -> <strong><{if $type == 'edit'}>修改文章分类<{else}>添加文章分类<{/if}></strong></span>
+</h1>
+<div class="list-div" id="listDiv" >
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=article&do=category">首页</a>&nbsp;|&nbsp;<a href="?action=article&do=category_add">添加文章分类</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" id="listDiv" style="margin-top:10px;">
+	<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>文章分类名称：</strong></td>
+		  <td class="tdbg"><input name="category_name" id="category_name" type="text" value="<{$result[0].category_name}>"></td>
+		</tr>
+		<tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>文章分类说明：</strong></td>
+		  <td class="tdbg">
+			<textarea tabindex="10" id="category_desc" cols="40" rows="15" name="category_desc"><{$result[0].category_desc}></textarea>
+		  </td>
+		</tr>
+		<tr>
+			<td height="40" colspan="2" align="center" class="tdbg">
+				<input id="dialog_edit"  type="submit" class="button" name="Submit" value="<{if $type == 'edit'}>保存<{else}>添加<{/if}>" style="cursor:hand;">
+				&nbsp;
+				<input name="Cancel" type="reset" class="button" id="Cancel" value="取消" style="cursor:hand;" onclick="go_cate_list();">
+			</td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+</form>
+<{include file="$temple_folder/footer.html"}>
+

@@ -1,0 +1,85 @@
+<{include file="$temple_folder/header.html"}>
+<script type="text/javascript">
+	function del_data(_id){
+		if(confirm('确定删除吗？？'))
+		{
+		$.ajax({ 								
+							type: "POST", 						
+							url : "admin.php?action=ad&do=del",					
+							data: {id:_id}, 	
+							success: function(result){			
+								location.reload();
+							}
+						});
+		}
+	}
+	
+</script>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<input id="order_name" type="checkbox" value="<{$order_name}>" name="order_name" style="display:none;">
+<input id="order_by" type="checkbox" value="<{$order_by}>" name="order_by" style="display:none;">
+<h1>
+	<span class="action-span1"> 广告管理-广告列表 </span>
+</h1>
+<div class="form-div">
+	  <form action="?action=ad&do=list" name="searchForm" method="post">
+	    
+	    标题
+	    <input type="text" name="keyword" value="<{$keyword}>" size="30" />
+        类型：
+       <select name="c_id" id="c_id">
+       			<option value="0">所有</option>
+		  		<{foreach from=$cat item=v}>
+		  			<option value="<{$v.c_id}>" <{if $c_id == $v.c_id}>selected<{/if}> ><{$v.c_name}></option>
+		  		<{/foreach}>
+		  	</select>
+	    <input type="submit" value=" 搜索 " class="button" />
+        </div>
+	  </form>
+	</div>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=ad&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=ad&do=add">添加广告</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+	
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer"> 名称 </th>
+					<th class="check_pointer"> 广告分类 </th>
+                    <th class="check_pointer"> 图片 </th>
+                     <th class="check_pointer"> 广告链接</th>
+                     <th class="check_pointer">显示时间 </th>
+					<th class="check_pointer"> 添加时间 </th>
+					<th class="check_pointer"> 状态 </th>
+					<th> 操作向导 </th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td height="22"> <{$r.ad_title}></td>
+					<td height="22"> <{$r.c_name}></td>
+                    <td height="22"> <img src="<{$r.ad_pic}>" width='100'/></td>
+                    <td height="22"><a href="<{$r.ad_web}>" target="_blank"><{$r.ad_web}></a></td>
+                    <td height="22"> <{$r.ad_open_time}></td>
+					<td height="22"> <{$r.add_time|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+					<td> <{if $r.ad_open == 1}>启用<{else}>未启用<{/if}></td>
+					<td  width="150" height="22">
+						<a href="javascript:;" id="dialog_del" onClick="del_data(<{$r.ad_id}>);" >删除</a>&nbsp;
+						<a href="?action=ad&do=add&type=edit&id=<{$r.ad_id}>">修改</a>
+					</td>
+				</tr>
+			  <{/foreach}>
+			</table>
+			<div style="margin-top:10px;text-align:left;">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+				总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+			</div>
+</div>
+<{include file="$temple_folder/footer.html"}>
+

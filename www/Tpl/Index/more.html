@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>__WEBN__-更多作品</title>
+<include file="./Tpl/Public/header.html" />
+</head>
+
+<body>
+  <div class="allbg">
+    <!------------框架------------->
+    <div class="nywrapper">
+      <!------------左侧------------->
+      <div class="left nynav fl">
+     <include file="./Tpl/Public/lefter.html" />
+      </div>
+      <!------------最新信息------------->
+      <div class="nymain fr">
+        <div class="nytitle"><div class="fl"><div class="st fl" style="background:#66cc33"></div><h2 style="color:#66cc33;">更多Pierrot动画作品</h2><div class="xx fr" style="width:420px;"></div></div></div>
+        <div class="zpmore">
+		  <ul>
+          <volist name="glist" id="vo" key='i'>
+          <if condition="($i%4 eq 3) or ($i%4 eq 0)">
+
+<li><div class="js"><h2><a href="<{$vo.ga_url}>" target="_blank"><{$vo.ga_title|mb_substr=0,10,'UTF-8'}></a></h2><p><{$vo.ga_sum|mb_substr=0,88,'UTF-8'}></p></div><div class="img" style=" margin-right:0px; margin-left:9px;"><img src="/<{$vo.ga_pic}>" /></div></li>
+<else />
+<li><div class="img"><img src="/<{$vo.ga_pic}>" /></div> <div class="js"><h2><a href="<{$vo.ga_url}>" target="_blank"><{$vo.ga_title|mb_substr=0,10,'UTF-8'}></a></h2><p><{$vo.ga_sum|mb_substr=0,88,'UTF-8'}>
+</p></div></li>
+</if>
+			</volist>
+		  </ul>
+		  <p class="cx">按年份查看更多作品: <a href="http://en.pierrot.jp/archives_1980s.html" target="_blank">1980s</a><a href="http://en.pierrot.jp/archives_1990s.html" target="_blank">1990s</a><a href="http://en.pierrot.jp/archives_2000s.html" target="_blank">2000s</a><a href="http://en.pierrot.jp/archives_2010s.html" target="_blank">2010s</a></p>
+		</div>
+    </div>
+    <include file="./Tpl/Public/footer.html" />
+    </div>
+  </div>
+</body>
+</html>

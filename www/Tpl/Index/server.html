@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>__WEBN__-授权服务</title>
+<include file="./Tpl/Public/header.html" />
+</head>
+<body>
+  <div class="allbg">
+    <!------------框架------------->
+    <div class="nywrapper">
+    	<div class="left nynav fl">
+      <include file="./Tpl/Public/lefter.html" />
+      </div>
+      <!------------最新信息------------->
+      <div class="nymain fr">
+        <div class="nytitle">
+		  <div class="fl"><div class="st fl" style="background:#ff3366"></div><h2 style="color:#ff3366;">公司业务摘要</h2><div class="xx fr" style="width:500px;"></div></div>
+		  <div class="zylist fl"><a href="<{:U('index/business')}>" >公司业务介绍</a><a href="<{:U('index/process')}>">授权流程</a><a href="<{:U('index/server')}>" class="hover">授后服务</a><a href="<{:U('index/protect')}>">版权保护</a></div>
+		</div>
+		<div class="clear"></div>
+	<js href="__JS__jquery.imgbox.pack.js" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+		$("#example2-1, #example2-2").imgbox({
+				'speedIn'		: 0,
+				'speedOut'		: 0,
+				'alignment'		: 'center',
+				'overlayShow'	: true,
+				'allowMultiple'	: false
+			});
+		});
+	</script>
+        <div class="shfw">
+		  <ul id="images">
+		    <li><a id="example2-2" href="__IMG__images/shfw_01.png"><h2>品牌培训 ></h2>对被授权商整体授权项目启动的指导与操作规范性的专业培训。帮助被授权商学习授权品牌、了解作业规范、认知授权市场。 </a></li>
+			<li><a id="example2-2" href="__IMG__images/shfw_02.png"><h2>产品开发支持 ></h2>协同被授权商进行产品、宣传海报、终端、展会、产品手册等应用设计</a></li>
+			<li><a id="example2-2" href="__IMG__images/shfw_03.png"><h2>订货／发布会支持 ></h2>协同被授权商进行订货会或发布会的策划与设计，现场品牌讲解，COSPLAY表演配合，助力客户实现订货会现场千万订货量！</a></li>
+			<li><a id="example2-2" href="__IMG__images/shfw_04.png"><h2>媒体/广告支持 ></h2>对于进行合作的伙伴，我们将于公司网站的首页醒目位置予以宣传推广，并在我们日常新闻、广告投放中，给予被授权商最大支持。</a></li>
+			<li><a id="example2-2" href="__IMG__images/shfw_05.png"><h2>反盗版支持> ></h2>我们对于任何侵害到我们的品牌版权，伤害我们合作伙伴的行为都绝不手软。我们将以完备的内部法律团队，联合数家知识产权律师事务所，组建覆盖全国的律师维权网络来打击盗版，通过法律途径来维护品牌以及被授权企业的权益。</a></li>
+			<li><a href="#"><h2>更多授后支持 > ></h2>电视广告片创意、制作、执行，行销方案支持，销售数据分析，渠道整合支持，终端促销服务等</a></li>
+		  </ul>
+		</div>
+    </div>
+  <include file="./Tpl/Public/footer.html" />
+    </div>
+  </div>
+</body>
+</html>

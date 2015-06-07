@@ -1,0 +1,10 @@
+﻿document.writeln("<div class=\"nav_content\">");
+document.writeln("        	<div class=\"welcome\">请记住我们的网址 动漫娱乐王国<a href=\"http://www.2121.com\">www.2121.com</a> ,以便您在下次登录继续游戏！</div>");
+document.writeln("            <ul>");
+document.writeln("            	<li class=\"dl\"><a href=\"#\">登陆</a></li>");
+document.writeln("                <li class=\"zc\"><a href=\"#\">注册</a></li>");
+document.writeln("                <li class=\"setHome\"><a href=\"#\">设为首页</a></li>");
+document.writeln("                <li class=\"fav\"><a href=\"#\">收藏</a></li>");
+document.writeln("                <li class=\"ie\"><a href=\"#\">把<span class=\"red\">2121</span>网放到桌面</a></li>");
+document.writeln("            </ul>");
+document.writeln("        </div>");

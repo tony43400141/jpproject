@@ -1,0 +1,47 @@
+<{include file="$temple_folder/header.html"}>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<h1>
+	<span class="action-span1">信息管理-信息列表 </span>
+</h1>
+<{if $result}>
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer"> 标题 </th>
+					<th class="check_pointer"> 类型</th>
+                    <th class="check_pointer"> 添加时间</th>
+                    <th class="check_pointer"> 操作说明 </th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td height="22" align="left"> <{$r.i_title}></td>
+					<td height="22" align="left"> <{$cat[$r.i_c]}></td>
+                    <td height="22"> <{$r.add_time|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+                    <td  width="150" height="22">
+						<a href="?action=info&do=add&type=edit&id=<{$r.i_id}>">修改</a>
+					</td>
+				</tr>
+			  <{/foreach}>
+			</table>
+			
+</div>
+<{/if}>
+<script type="text/javascript">
+	
+	function del_data(_id){
+		if(confirm('确定删除吗？？'))
+		{
+		$.ajax({ 								
+							type: "POST", 						
+							url : "admin.php?action=info&do=del",					
+							data: {id:_id}, 	
+							success: function(result){			
+								location.reload();
+							}
+						});
+		}
+	}
+	
+</script>
+<{include file="$temple_folder/footer.html"}>
+

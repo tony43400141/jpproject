@@ -1,0 +1,188 @@
+/*入驻人数*/
+.rzrs{height:149px; background:url(../../images/php_index/yqw.jpg) no-repeat; position:relative;}
+.rzrs p{ visibility:hidden;}
+.rzrs p span{ font-size:22px; font-family:Arial, Helvetica, sans-serif; color:#f00; font-weight:bolder; font-style:oblique;clear:both; visibility:visible; display:block; position:absolute;right:10px; top:50px;}
+
+/*游戏入口*/
+.entrance{height:142px; margin:7px 0 0 ; position:relative;}
+.game_list_l{width:5px; height:142px; background:url(../../images/php_index/into_l.jpg) no-repeat;float:left;}
+.game_list_r{width:5px; height:142px; background:url(../../images/php_index/into_r.jpg) no-repeat;float:left; position:relative;}
+.game_list_c{ background:url(../../images/php_index/into_bg.jpg) repeat-x;height:142px;width:685px; float:left;}
+.game_list_c ul{padding:10px; text-align:center; width:648px; margin:0 auto;}
+.game_list_c ul li{ float:left;background:url(../../images/php_index/gam_rk_bg.jpg) no-repeat; margin:0 6px}
+.game_list_c ul li a{width:130px; height:103px;padding:10px; display:block;  color:#FFF; font-weight:bold; text-align:center; line-height:25px; position:relative;}
+.game_title{width:130px; height:25px; background:#000;background:#000000; filter:alpha(Opacity=70); Opacity:0.7; cursor:pointer; display:block; position:absolute; bottom:10px;left:10px;}
+.game_title strong{color:#fff;filter:alpha(Opacity=100); Opacity:1;}
+.new{width:51px; height:52px; display:block; position:absolute; top:0; left:0;background:url(../../images/php_index/new.gif) no-repeat;}
+.pre,.next{width:15px; height:50px; position:absolute; z-index:999; top:50px;}
+.pre{background:url(../../images/php_index/pre.jpg) no-repeat; left:0;}
+.next{background:url(../../images/php_index/next.jpg) no-repeat; right:1px;}
+
+/*用户登陆*/
+.login_t{width:241px; height:35px; background:url(../../images/php_index/user_login.jpg) no-repeat;}
+.login_b{width:241px; height:11px; background:url(../../images/php_index/user_login_bot.jpg) no-repeat;}
+.login_c{width:221px;padding:5px 10px 0;background:url(../../images/php_index/user_login_bg.jpg) repeat-y; position:relative;color:#666666; overflow:hidden;}
+.user_c{width:152px;padding:4px 0 0 6px; float:left}
+.user_c li{ padding: 6px 10px;height:18px; background:url(../../images/php_index/sr_bg.jpg) no-repeat;}
+.user_c li label{width:50px; text-align:right; float:left; color:#b0b0b0;}
+.noborder{width:80px; background:none; border:none; float:left;}
+.login_in{width:51px; height:53px; background:url(../../images/php_index/login_but.jpg) no-repeat; display:block; float:left; margin:8px 0 0 8px;}
+.jz{padding:0px 10px 8px 10px ;}
+.jzmm{border:1px solid #1c5180;padding:0; background:none; width:14px; height:14px;}
+.button{background:url(../../images/php_index/button_bg.jpg) no-repeat;padding:4px 16px; display:inline-block; color:#414141;}
+.func_bt{float:left; padding: 0 0 9px;}
+.func_bt li{float:left; margin:0 5px 0 15px}
+.user_manage{background:url(../../images/php_index/func_bg.jpg) repeat-x; margin:0 0 0 -5px; width:232px; height:50px; overflow:hidden;}
+.user_manage li{float:left;}
+.user_manage li a{width:50px; height:50px; display:block;margin:0 12px; text-indent:-9999px; overflow:hidden;}
+.user_manage li a:hover{ background-position:0 -50px;}
+.recharge{ background:url(../../images/php_index/zhcz.jpg) no-repeat;}
+.servies{ background:url(../../images/php_index/kf.jpg) no-repeat}
+.passport{ background:url(../../images/php_index/zh.jpg) no-repeat}
+
+/*登陆成功显示的用户信息*/
+.user_info{width:200px; height:50px; overflow:hidden;padding:0 10px 6px 8px; border-bottom:1px dashed #ccc;}
+.user_info dt{width:68px; float:left;}
+.user_info dt img{border:1px solid #ccc;}
+.user_info dd{width:125px; float:left;}
+.user_info dd ul li{line-height:18px;}
+.name{color:#363483; font-weight:bold;}
+.suc_but{padding:6px 0 5px 0;width:221px; height:50px;}
+.suc_but li{margin: 2px 5px 1px 15px; display:inline;}
+.yxls{background:url(../../images/php_index/func_bg.jpg) repeat-x; margin:0 0 0 -5px; padding:9px 0 0 13px; width:219px; height:41px; overflow:hidden;}
+.yxli_t{font-size:12px; color:#414141; font-weight:bold;}
+.yxls li ul li{width:100px; line-height:32px; *line-height:15px; float:left;}
+
+/*大眼睛*/
+.func_side{width:5px; height:50px;background:url(../../images/php_index/login_side.jpg) no-repeat;}
+.rigth_l{width:10px; height:217px; background:url(../../images/php_index/banner_left.jpg) no-repeat; float:left;}
+.right_b{width:10px; height:217px; background:url(../../images/php_index/banner_right.jpg) no-repeat; float:left;}
+.right_c{width:676px; height:217px; float:left; background:url(../../images/php_index/pic_bg.jpg) repeat-x;}
+.eyes_side{width:5px; height:217px; background:url(../../images/php_index/eyes_side.jpg) no-repeat; float:left;}
+
+
+/*********图片切换 css定义***********/
+.sub_box{width:341px; height:198px; float:left; position:relative; overflow:hidden; margin:8px 6px 6px 0;}
+#bd1lfimg{position:relative; width:341px; height:198px;overflow:hidden;}
+#bd1lfimg div{width:100000px; margin-left:-4px;}
+#bd1lfimg dl{width:341px; height:198px;position:relative; overflow:hidden; float:left;}
+#bd1lfimg dt{width:341px; height:198px; position:absolute; left:0px; top:0px;}
+#bd1lfimg dd a{color:#ffffff; text-decoration:none;}
+#bd1lfimg dd a:hover{text-decoration:none; color:#cccccc;}
+#bd1lfimg dd tt{color:#dddddd; line-height:1.2em;}
+#bd1lfimg dd tt a:hover{text-decoration:underline;}
+
+.sub_nav{width:341px; height:25px; bottom:0px; position:absolute; color:#999999; z-index:200;}
+.sub_no{height:25px; float:right;}
+.sub_no li{display:block; width:25px; height:25px; float:left; overflow:hidden; line-height:25px; vertical-align:middle; text-align:center; background:#000000; filter:alpha(Opacity=70); Opacity:0.7; font-family:Arial; font-size:11px; color:#999999; cursor:pointer;}
+.sub_no li.show{background:#ffffff; color:#000000;}
+.sub_more{float:right; width:50px; height:25px; background:#000000; filter:alpha(Opacity=70); Opacity:0.7; color:#999999; text-align:center; line-height:25px;}
+.sub_more a{color:#999999;}
+.sub_more a:hover{color:#cccccc; text-decoration:none;}
+
+/*新闻&活动*/
+.game_news{width:324px; height:209px; background:#fff; float:left; margin:4px 0;}
+.tab1{width:305px; height:26px; border-bottom:1px solid #c8d8f2; margin:8px 0 0 10px; position:relative;}
+#news li{width:74px; height:13px; background:url(../../images/php_index/tab_bg.jpg) no-repeat; text-align:center;padding:7px 0;_padding:7px 0 3px; font-size:14px;margin:0 2px 0 0; color:#5f6f8d; cursor:pointer; font-weight:bold;float:left;}
+#news li.now{ background-position:0 -27px; color:#555555;}
+.tablist{width:305px; margin:4px 0 0 10px;}
+.tablist li{line-height:26px; border-bottom:1px dashed #ccc;padding:0 0 0 5px;}
+.tablist li span{color:#666666;width:40px;}
+
+/*开服时间列表*/
+.left_t{width:241px; height:41px; background:url(../../images/php_index/web_title.jpg) no-repeat; position:relative}
+.title_kf{width:143px; height:28px; background:url(../../images/php_index/kfsj.jpg) right bottom no-repeat; text-indent:-9999px; display:block;}
+.left_b{width:241px; height:16px; background:url(../../images/php_index/web_left_bot.jpg) no-repeat;}
+.left_c{background:url(../../images/php_index/web_left_bg.jpg) repeat-y;padding:4px 10px 0;}
+.kfsj table{text-align:center;}
+.kfsj th{color:#666666; line-height:21px;border-bottom:1px solid #ccc;}
+.kfsj td{line-height:34px; border-bottom:1px dashed #ccc;}
+.bk1{width:1px;height:12px; font-weight:normal; color:#ccc; padding:0 1px;}
+
+/*最新游戏列表*/
+.right_t{width:696px; height:10px; background:url(../../images/php_index/right_top.jpg) no-repeat; font-size:0; line-height:0; }
+.right_bot{width:696px; height:10px; clear:both; background:url(../../images/php_index/right_bot.jpg) no-repeat;}
+.right_cot{width:666px; float:left; padding:5px 15px; background:url(../../images/php_index/right_bg.jpg) repeat-y;position:relative;}
+.zxyx_gg{color:#6874ac;background:url(../../images/php_index/zxyx.jpg) no-repeat;padding:0 0 0 150px; line-height:22px;}
+.zx_title{height:24px; border-bottom:1px solid #ece6e6;}
+.zx_list{padding:10px 0 0; margin:0; float:left;}
+.game_list{width:209px; display:inline; float:left; background:url(../../images/php_index/yx_bg.jpg) no-repeat; margin:9px 6px; *margin:5px 6px;} 
+.game_list dt{display:inline; float:left;padding:5px;}
+.game_list dd{display:inline; float:left;line-height:21px;padding:8px 5px;}
+.game_list dd h2{font-size:14px; text-align:center; }
+.game_links{line-height:14px;margin:10px 0 6px;}
+.game_links li{float:left;padding:0 5px;border-right:1px solid #333;}
+.game_links li.enter{border:none; margin:-4px 0 0 21px;}
+.enter a{width:73px; display:block; text-align:center; line-height:21px; background:url(../../images/php_index/into.jpg) no-repeat; color:#f00;}
+
+/*热门活动*/
+.active{width:106px; height:28px; background:url(../../images/php_index/hot_act.jpg) right bottom no-repeat; text-indent:-9999px; display:block;}
+.l_but,.r_but{width:22px;height:22px; display:block; position:absolute; top:8px }
+.l_but{background:url(../../images/php_index/icon_l.jpg) no-repeat;right:45px;}
+.r_but{background:url(../../images/php_index/icon_r.jpg) no-repeat;right:15px;}
+.hot_act{font-size:12px;padding:0 5px 5px;}
+.hot_act a{font-size:12px;}
+.hot_act li{border-bottom:#c2c2c2 1px dotted;display:inline-block;clear:both; padding:5px 0; width:210px;}
+.hot_act p code {float:left; line-height:8px;color:#9f9fa1;}
+.hot_act img {float:left;padding:2px; border:1px solid #e3e3e3;margin:3px 10px 0 0;display:inline;}
+.hot_act em {display:block;color:#919b9d;}
+.hot_act div{line-height:19px; padding-bottom:5px; display:none;}
+
+/*原创动漫*/
+.ycdm,.dmxs,.center_side{float:left;}
+.ycdm,.ycdm_bt,.dmxs{width:312px;position:relative;}
+.ycdm_bt{padding:0 0 5px 0; border-bottom:2px solid #ece6e6;}
+.ycdm_bt span{width:94px;height:16px; background:url(../../images/php_index/ycdm.jpg) no-repeat; text-indent:-9999px; display:block;}
+.dm_list{padding:13px 0 0;}
+.dm_list li{width:94px; padding:5px; text-align:center; float:left;}
+.dm_list li span{font-size:14px; display:block;margin:15px 0 5px; font-weight:bold; color:#494949}
+.dm_list li img{border:2px solid #d7d7d7;padding:1px;}
+.center_side{width:38px; height:194px; background:url(../../images/php_index/center_side.jpg) top center no-repeat;}
+
+/*动漫小说*/
+.dmxs_bt{padding:0 0 5px 0; border-bottom:2px solid #ece6e6;}
+.dmxs_bt span{width:94px;height:16px; background:url(../../images/php_index/dmxs.jpg) no-repeat; text-indent:-9999px; display:block;}
+
+
+/*新闻列表*/
+.news_box_t{width:696px; height:36px; background:url(../../images/php_index/news_tbg.jpg) no-repeat; }
+.news_box_c{width:696px;min-height:769px; height:100%; _height:782px;padding:5px 0; background:url(../../images/php_index/news_list_bg.jpg) repeat-y; float:left;}
+.news_box_b{width:696px; height:13px; background:url(../../images/php_index/news_list_bot.jpg) no-repeat;clear:both; float:left}
+.location{padding:12px 0 0 35px; font-size:13px;}
+.news_th{padding:8px; height:36px;}
+.news_th_l{width:8px; height:36px; background:url(../../images/php_index/news_th_l.jpg) no-repeat; float:left;}
+.news_th_r{width:8px; height:36px; background:url(../../images/php_index/news_th_r.jpg) no-repeat; float:left;}
+.news_th_c{height:36px; background:url(../../images/php_index/news_th_bg.jpg) repeat-x; float:left;}
+.news_th_c ul{padding:10px 20px 0;}
+.news_th_c ul li{float:left; font-size:14px; font-weight:bold; color:#717171;}
+.th_side{width:1px; height:14px; background:#e6e6e6;margin:0 20px;}
+.column,.renew{width:110px;text-align:center}
+.th_bt{width:320px; text-align:center}
+.news_data{margin:0 13px; font-size:14px;*margin:-14px 13px 0;}
+.news_data li{line-height:32px;}
+.news_data li ul li{border-bottom:1px dashed #ccc;}
+.news_data li ul li.sslm{width:160px; display:block; float:left;  text-align:center}
+.news_data li ul li.bt{width:390px;display:block; float:left; text-align:center}
+.news_data li ul li.time{width:110px; display:block; float:left;text-align:center}
+
+/*分页*/
+.page{clear:both; padding:25px 0 15px 0; height:25px;}
+.scott {padding:3px;margin:3px; text-align: center}
+.scott a {border: #ddd 1px solid;padding:3px 8px;  color: #466a98; margin:5px;   text-decoration: none}
+.scott a:hover {border:#466a98 1px solid; color: #fff;background-color: #466a98}
+.scott a:active {border: #85bd1e 1px solid; color: #638425; background-color: #f1ffd6}
+.scott span.current { padding:5px 8px; font-weight: bold;color: #fff; margin:5px ; background: #ccc}
+div.scott span.disabled {border: #f3f3f3 1px solid; padding:2px 5px;color: #ccc; margin:0 2px 0 0;}
+
+/*新闻内容*/
+.news_content{padding:20px 30px; width:636px; overflow:hidden;}
+.news_content h2{ font-size:21px; color:#ff5227; font-family:"黑体"; text-align:center}
+.news_content .fbsj{color:#ccc; padding:15px 5px;display:block; text-align:center;}
+.tj_yx{border:1px dashed #ccc;width:600px;margin:0 auto 20px; display:block; height:26px; overflow:hidden;}
+.tj_yx span{padding:5px; margin:1px; background:#fa0; float:left;}
+.tj_yx ul{width:300px; float:left; padding:5px;}
+.tj_yx ul li{float:left;}
+.tj_yx ul li a{padding:0 5px 0; }
+.news_main{clear:both;width:636px;}
+.news_main p{ line-height:21px; padding:10px 0;}
+.news_main p img{text-align:center;}

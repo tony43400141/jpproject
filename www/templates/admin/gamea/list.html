@@ -1,0 +1,77 @@
+<{include file="$temple_folder/header.html"}>
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0">
+<h1>
+	<span class="action-span1">作品管理-作品列表 </span>
+</h1>
+<div class="form-div">
+	  <form action="?action=gamea&do=list" name="searchForm" method="post">
+	    
+	    标题
+	    <input type="text" name="keyword" value="<{$keyword}>" size="30" />
+	    
+        是否首页显示
+		<select name="is_m" id="is_m" style="width:100px;">
+			<option value="-1" <{if $is_m==-1}>selected<{/if}> <{if !isset($is_m)}>selected<{/if}> >所有</option>
+			<option value="1" <{if $is_m==1}>selected<{/if}> >是</option>
+            <option value="0" <{if $is_m==0}>selected<{/if}> >否</option>
+		</select>
+	    <input type="submit" value=" 搜索 " class="button" />
+        </div>
+	  </form>
+	</div>
+<{if $result}>
+<div class="list-div" style="margin-top:10px;" >
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table">
+				<tr align="center" class="title" >
+					<th class="check_pointer"> 标题 </th>
+					<th class="check_pointer"> 封面图</th>
+                    <th class="check_pointer"> 作品显示链接</th>
+                    <th class="check_pointer"> 是否主页显示</th>
+                    <th class="check_pointer"> 排序</th>
+                    <th class="check_pointer"> 添加时间</th>
+                    <th class="check_pointer"> 操作说明 </th>
+				</tr>
+			 <{foreach from=$result.result item=r}>
+				<tr align="center" class="tdbg"  onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#BFDFFF'">
+					<td height="22" align="left"> <{$r.ga_title}></td>
+					<td height="22" align="left">
+                    <{if $r.ga_pic }>
+					<img  border="0" alt="" src="<{$r.ga_pic}>" id="" width="100">
+					<{/if}>
+            </td>
+             <td height="50" ><a href="<{$r.ga_url}>" target="_blank" ><{$r.ga_url}></a></td>
+                    <td height="50" > <{if $r.is_m==1 }>是<{else}>否<{/if}></td>
+					<td  width="50" height="22"> <{$r.is_order}> </td>
+                    <td height="22"> <{$r.add_time|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+                    <td  width="150" height="22">
+						<a href="javascript:;" id="dialog_del" onClick="del_data(<{$r.ga_id}>);" >删除</a>&nbsp;
+						<a href="?action=gamea&do=add&type=edit&id=<{$r.ga_id}>">修改</a>
+					</td>
+				</tr>
+			  <{/foreach}>
+			</table>
+            <div style="margin-top:10px;text-align:left;">
+				总记录数：<{$result.total}>&nbsp;&nbsp;<{if $result.total}><{$result.pages}><{/if}>
+			</div>
+			
+</div>
+<{/if}>
+<script type="text/javascript">
+	
+	function del_data(_id){
+		if(confirm('确定删除吗？？'))
+		{
+		$.ajax({ 								
+							type: "POST", 						
+							url : "admin.php?action=gamea&do=del",					
+							data: {id:_id}, 	
+							success: function(result){			
+								location.reload();
+							}
+						});
+		}
+	}
+	
+</script>
+<{include file="$temple_folder/footer.html"}>
+

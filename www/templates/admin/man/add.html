@@ -1,0 +1,62 @@
+<{include file="$temple_folder/header.html"}>
+<body>
+<style>
+.ui-button { margin-left: -1px; }
+.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+.ui-autocomplete-input { margin: 0; padding: 0.48em 0 0.47em 0.45em; }
+</style>
+<script type="text/javascript">
+function go_cate_list(){
+	location.href ="?action=man&do=list";
+}	
+</script>
+<form method="post" action="?action=man&do=<{if $type == 'edit'}>update&id=<{$id}><{else}>insert<{/if}>" name="add_form" id="add_form" enctype="multipart/form-data">
+<h1>
+	<span class="action-span1">团队管理-<strong><{if $type == 'edit'}>修改团队<{else}>添加团队<{/if}></strong></span>
+</h1>
+<div class="list-div" id="listDiv">
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="list-table">
+		<tr class="tdbg">
+			<td width="70" height="30">快捷操作：</td>
+			<td height="30"><a href="?action=man&do=list">首页</a>&nbsp;|&nbsp;<a href="?action=man&do=add">添加团队</a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="list-div" style="margin-top:10px;" >
+	<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="list-table" >
+		<tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>人员名称：</strong></td>
+		  <td class="tdbg"><input name="m_title" id="m_title" type="text" value="<{$result[0].m_title}>" size="50"></td>
+		</tr>
+		<tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>头像图片：</strong></td>
+		  <td class="tdbg">
+			<{if $result[0].m_pic }>
+				<img  border="0" alt="" src="<{$result[0].m_pic}>" id="" width="200"><br>
+			<{/if}>
+			<input name="m_pic" id="m_pic" type="file" value="<{$result[0].m_pic}>" size="50">
+			</td>
+		</tr>
+		<tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>排序：</strong></td>
+		  <td class="tdbg"><input name="m_order" id="m_order" type="text" value="<{$result[0].m_order}>" size="3">(1代表第一位，2代表第二位)</td>
+		</tr>
+        <tr class="tdbg">
+		  <td width="100" class="tdbg right_title"><strong>介绍：</strong></td>
+		  <td class="tdbg">
+			<{$m_desc}>
+		  </td>
+		</tr>
+		<tr>
+			<td height="40" colspan="2" align="center" class="tdbg">
+				<input id="dialog_edit" class="button"  type="submit" name="Submit" value="<{if $type == 'edit'}>保存<{else}>添加<{/if}>" style="cursor:hand;">
+				&nbsp;
+				<input name="Cancel" class="button" type="reset" id="Cancel" value="取消" style="cursor:hand;" onClick="go_cate_list();">
+			</td>
+		</tr>
+	</table>
+</div>
+</form>
+<{include file="$temple_folder/footer.html"}>
+

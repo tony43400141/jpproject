@@ -1,0 +1,91 @@
+<!------------logo------------->
+    <div class="logo"><H1><a href="http://www.pierrotchina.com"><img src="__IMG__images/logo.jpg" alt="皮乐中国"/></a></H1></div>
+    <!------------导航------------->
+    <div class="nav white">
+      <ul>
+        <li><h2 class="aa"><a href="/" >首页 ></a></h2></li>
+        <li><h2 class="bb">公司信息</h2>
+          <div class="menu chengse">
+          <a href="<{:U('index/company')}>" >Pierrot 株式会社</a>
+          <a href="<{:U('index/china')}>" >Pierrot China</a></div></li>
+        <li><h2  class="cc">公司业务摘要</h2>
+        <div class="menu meise">
+          <p><a href="<{:U('index/business')}>" >公司业务介绍</a></p>
+          <p><a href="<{:U('index/process')}>" >授权流程</a></p>
+          <p><a href="<{:U('index/server')}>" >授后服务</a></p>
+          <p><a href="<{:U('index/protect')}>" >版权保护</a></p></div></li>
+        <li><h2  class="dd">作品信息</h2>
+        <div class="menu lvse" id="cartoon">
+          <p><a href="<{:U('index/more')}>" >更多Pierrot动画作品</a></p>
+          <p><a href="<{:U('index/cwf')}>" >CWF作品</a></p>
+        <li><h2 class="ee">联系我们</h2>
+        <div class="menu lanse">
+          <p><a href="<{:U('index/contact')}>" >联系方式</a></p></div>
+        <!------------微博微信------------->
+        <div class="weixin">
+          <div class=" gz fl">
+            <p><a href="http://weibo.com/5017523178/profile?topnav=1&wvr=5" target="_blank"  rel="nofollow"><img src="__IMG__images/wb-xl.jpg" /></a></p>
+            <p>
+            <a href="#" target="_blank"  rel="nofollow">
+              <img src="__IMG__images/wb-tx.jpg" alt="皮乐中国"/>
+            </a>
+            </p>
+            </div>
+          <div class="ewm fr"><img src="__IMG__images/ewm.jpg" style="width:66px;height:66px;"  onmouseover="ShowFloatingImage(this, 150, 150);"  alt="皮乐中国" /></div>
+        </div></li>
+      </ul>
+    </div>
+<script language='javascript'>
+$(function(){
+	$.ajax({
+			   type:'get',
+			   url:"<{:U('index/getCartoon')}>",
+			   cache:false,
+			   success:function(data)
+			   {
+				  var _t = $('#cartoon').html(); 
+				 $('#cartoon').html(data+_t);   
+			   }
+		});
+	});
+
+</script>
+<script>
+
+function GetAbsPosition(obj)
+{
+      var curleft = 0, curtop = 0;
+      do {
+      curleft += obj.offsetLeft;
+      curtop += obj.offsetTop;
+      } while (obj = obj.offsetParent);
+      return [curleft,curtop];       
+}
+
+function ShowFloatingImage(image, width, height)
+{
+    var id = "trailimageid";
+    var newdiv = document.getElementById(id);
+    if(newdiv == null)
+    {
+      newdiv = document.createElement('div');
+      newdiv.setAttribute('id',id);
+      newdiv.setAttribute('onmouseout', "HideElement('"+id+"');");
+      document.body.appendChild(newdiv);
+    }
+    newdiv.innerHTML = '<img src='+image.src+ ' width='+(image.width + width) + ' height=' + (image.height + height) + ' />';
+
+    var absPos = GetAbsPosition(image);
+    newdiv.style.position = "absolute";        
+    newdiv.style.left = absPos[0] - width/2+'px';
+    newdiv.style.top = absPos[1] - height/2-75+'px';
+    newdiv.style.display="block";
+}
+
+function HideElement(id)
+{
+    var elem = document.getElementById(id);
+    elem.style.display="none";
+}
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>__WEBN__-中国</title>
+<include file="./Tpl/Public/header.html" />
+</head>
+
+<body>
+  <div class="allbg">
+    <!------------框架------------->
+    <div class="nywrapper">
+      <!------------左侧------------->
+      <div class="left nynav fl">
+         <include file="./Tpl/Public/lefter.html" />
+      </div>
+      <!------------最新信息------------->
+      <div class="nymain fr">
+        <div class="nytitle">
+		  <div class="fl"><div class="st fl" style="background:#fe9900"></div><h2 style="color:#fe9900;">公司信息</h2><div class="xx fr"></div></div>
+		  <div class="jylist fl"><a href="<{:U('index/china')}>" class="hover">Pierrot China(皮乐中国)介绍</a></div>
+		</div>
+        <div class="jyjsnr" style="padding-bottom:50px;"><img src="__IMG__images/ptchina.jpg" />
+		  <p>Pierrot China(皮乐中国)是日本Pierrot株式会社的子公司，在中国成为一家专业的动漫品牌授权管理运营公司，拥有日本的国际知名动漫品牌的中国区授权业务的代理权。</p>
+		  <p>我们向中国的零售企业（例如家居、时尚、快消品、食品、文、玩具、餐饮等行业）及娱乐产业公司（各类型的游戏公司，主题乐园等）提供本公司所拥有的动漫品牌的授权服务。</p>
+		  <p style="font-size:16px; font-family:微软雅黑">管理团队简介</p>
+		  <div class="clear"></div>
+		  <div class="ptchinajs">
+		    <ul>
+            <volist name="result" id="vo">
+			  <li><div class="img"><img src="/<{$vo.m_pic}>" style=" width:60px;"/></div> <div class="tdjs"><h2><{$vo.m_title}></h2><{$vo.m_desc}></div></li>
+              </volist>
+			</ul>
+		  </div>
+		</div>
+    </div>
+     <include file="./Tpl/Public/footer.html" />
+    </div>
+  </div>
+</body>
+</html>
